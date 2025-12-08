@@ -6,120 +6,145 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+
+#  Bài Thu Hoạch Sự Kiện “Cloud Day” 
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Sự kiện “Cloud Day” được tổ chức nhằm giới thiệu xu hướng phát triển AI tại Việt Nam, đặc biệt là bước tiến từ Generative AI sang Agentic AI. Các diễn giả cũng trình bày các giải pháp mới của AWS như **Amazon Bedrock**, **AgentCore**, và **SageMaker Unified Studio** – những công cụ hỗ trợ doanh nghiệp xây dựng, triển khai và vận hành AI agent một cách nhanh chóng và an toàn.
 
-### Danh Sách Diễn Giả
+---
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Diễn Giả
 
-### Nội Dung Nổi Bật
+* **Kien Nguyen** – Solutions Architect
+* **Jun Kai Loke** – AI/ML Specialist SA, AWS
+* **Tamelly Lim** – Storage Specialist SA, AWS
+* **Binh Tran** – Senior Solutions Architect, AWS
+* **Taiki Dang** – Solutions Architect, AWS
+* **Michael Armentano** – Principal WW GTM Specialist, AWS
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+---
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+### Nội Dung Chính
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Tác động của AI đối với kinh tế Việt Nam
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+* AI dự kiến đóng góp **120–130 tỷ USD** (khoảng 25% GDP) vào năm 2040.
+* Quy mô thị trường AI hiện đạt **750 triệu USD**, tăng trưởng **15–18% mỗi năm**.
+* Việt Nam có khoảng **765 startup AI**, xếp **thứ 2 trong ASEAN**.
+* Dù tiềm năng lớn, Việt Nam vẫn đang trong giai đoạn đầu, cần đầu tư thêm về hạ tầng, nhân lực và chính sách hỗ trợ.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+---
 
-#### Domain-Driven Design (DDD)
+#### Hành trình phát triển: từ Generative AI → Agentic AI
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+* Công nghệ AI đang chuyển từ **công cụ hỗ trợ tạo nội dung** sang **hệ thống có khả năng hành động độc lập**.
+* Agentic AI cho phép nhiều agent phối hợp để hoàn thành các nhiệm vụ phức tạp.
+* Mức độ tự động hóa ngày càng cao, giảm dần sự can thiệp trực tiếp của con người.
 
-#### Event-Driven Architecture
+---
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### Ứng dụng Agentic AI trong doanh nghiệp
 
-#### Compute Evolution
+* Tăng năng suất, giảm tải công việc lặp lại, hỗ trợ đổi mới sáng tạo.
+* Đến **2028**, dự báo **33% ứng dụng doanh nghiệp** sẽ tích hợp Agentic AI.
+* Khoảng **15% các quyết định vận hành thường ngày** có thể được tự động hóa.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+---
 
-#### Amazon Q Developer
+#### Amazon Bedrock – Nền tảng AI tổng hợp
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+* Cung cấp nhiều mô hình từ các nhà cung cấp hàng đầu.
+* Hỗ trợ tùy chỉnh mô hình bằng dữ liệu riêng, đảm bảo bảo mật và tối ưu chi phí.
+* Có sẵn cơ chế **Responsible AI**.
+* Cung cấp nền tảng triển khai AI agent nhanh chóng, dễ mở rộng, dễ tích hợp.
 
-### Những Gì Học Được
+---
 
-#### Tư Duy Thiết Kế
+#### Amazon Bedrock AgentCore
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+* Khung triển khai agent bảo mật, có khả năng mở rộng.
+* Tương thích với các framework phổ biến: **LangChain**, **CrewAI**, **LangGraph**, **Strands Agents**.
+* Hỗ trợ quản lý **memory ngắn hạn, dài hạn** và **semantic search**.
+* Cho phép tích hợp, theo dõi và khám phá công cụ linh hoạt.
 
-#### Kiến Trúc Kỹ Thuật
+---
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### Hạ tầng dữ liệu và AI hiện đại
 
-#### Chiến Lược Hiện Đại Hóa
+* **SageMaker Unified Studio** đóng vai trò trung tâm cho dữ liệu, phân tích, và AI.
+* Tích hợp chặt chẽ với:
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+  * **Redshift, Athena, EMR, Glue** – xử lý và quản lý dữ liệu.
+  * **QuickSight** – trực quan hóa.
+  * **Bedrock** – xây dựng ứng dụng GenAI.
+* Hỗ trợ mô hình **Zero-ETL** giữa **S3** và **Redshift**, giúp đơn giản hóa luồng dữ liệu.
 
-### Ứng Dụng Vào Công Việc
+---
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+#### Mô hình Data Lakehouse
 
-### Trải nghiệm trong event
+* Hỗ trợ đa dạng các hệ thống lưu trữ: **S3 Tables**, **Redshift Managed Storage**.
+* Kết nối dữ liệu từ nhiều nguồn lớn như **Aurora, DynamoDB, MSK, Kinesis, Salesforce, SAP, Facebook Ads**, v.v.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+---
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+### Những Gì Tôi Học Được
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+#### Về tư duy AI và Cloud
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+* Hiểu rõ sự khác biệt giữa Generative AI và Agentic AI – hướng phát triển tất yếu của ngành.
+* Nhận thức rằng Agentic AI không chỉ trả lời mà còn **hành động và ra quyết định**.
+* Nắm được khả năng của Bedrock trong xây dựng hệ thống AI thông minh và tự động hóa.
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+#### Về kiến trúc kỹ thuật
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+* Hình dung được cách Bedrock kết hợp với SageMaker, Redshift và S3 trong một hệ sinh thái AI hoàn chỉnh.
+* Hiểu cách AWS xử lý các phần phức tạp như memory, tool discovery và quan sát agent (observability).
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+---
+
+### Ứng Dụng Thực Tế
+
+* Ứng dụng **Amazon Titan Embeddings** để tạo embedding cho dự án hiện tại.
+* Thử nghiệm mô hình **Zero-ETL** giữa Aurora/DynamoDB và Redshift.
+* Tìm hiểu khả năng xây dựng **tác tử AI tự động hóa quy trình doanh nghiệp** bằng AgentCore thay vì dùng Lambda thủ công.
+
+---
+
+### Trải Nghiệm Tại Sự Kiện
+
+Tham gia Cloud Day giúp tôi có góc nhìn rõ ràng hơn về cách AI, đặc biệt Agentic AI, đang thay đổi cách doanh nghiệp vận hành.
+
+#### Giao lưu với các chuyên gia AWS
+
+* Các diễn giả chia sẻ nhiều ví dụ thực tế về cách Amazon ứng dụng AI trong quy mô lớn.
+* Hiểu sâu hơn cách hệ thống multi-agent vận hành trong môi trường doanh nghiệp.
+
+#### **Trải nghiệm kỹ thuật**
+
+* Tìm hiểu hoạt động của AgentCore từ quản lý memory đến tích hợp công cụ.
+* Nắm được cách dữ liệu được luân chuyển giữa S3 – Redshift – SageMaker trong các ứng dụng AI.
+* Thấu hiểu mô hình Lakehouse và Zero-ETL.
+
+#### **Bài học rút ra**
+
+* Agentic AI là bước tiến không thể tránh khỏi nếu doanh nghiệp muốn tự động hóa ở quy mô lớn.
+* Hạ tầng AI hiện đại phải dựa trên cloud và dữ liệu.
+* AWS đang dẫn đầu trong việc cung cấp nền tảng đầy đủ cho AI/ML.
+
+---
+
+### Hình Ảnh Tại Sự Kiện
+
+![Image](/images/2-Proposal/clouday.png)
+![Image](/images/2-Proposal/cloudday1.png)
+![Image](/images/2-Proposal/cloudday2.png)
+![alt text](/images/2-Proposal/cloudday3.jpg)
+
+
+> Tổng thể, sự kiện không chỉ mang đến cho tôi kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tiếp cận trong việc thiết kế ứng dụng, hiện đại hóa hệ thống và nâng cao khả năng phối hợp giữa các nhóm. Đây thực sự là một trải nghiệm giá trị, giúp tôi nhìn nhận rõ hơn cách xây dựng các giải pháp hiệu quả và linh hoạt trong môi trường doanh nghiệp.
+
+

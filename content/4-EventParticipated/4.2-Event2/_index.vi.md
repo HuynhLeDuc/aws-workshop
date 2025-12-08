@@ -6,120 +6,95 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Báo cáo thu hoạch “Generative AI cùng Amazon Bedrock”
 
-### Mục Đích Của Sự Kiện
+### Mục tiêu của buổi hội thảo
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Trang bị kiến thức cơ bản về Generative AI và điểm khác biệt so với Machine Learning cổ điển.
+- Mô tả chi tiết dịch vụ Amazon Bedrock và các mô hình nền (Foundation Models).
+- Hướng dẫn kỹ thuật RAG (Retrieval Augmented Generation) để phát triển ứng dụng AI thông minh, chính xác và giảm thiểu lỗi ảo giác.
+- Giới thiệu hệ thống các dịch vụ AI chuyên sâu của AWS.
+### Danh sách người trình bày
 
-### Danh Sách Diễn Giả
+- **Lâm Tuấn Kiệt** - Kỹ sư DevOps cấp cao, FPT Software.
+- **Danh Hoàng Hiếu Nghĩa** - Kỹ sư AI, Renova Cloud.
+- **Đinh Lê Hoàng Anh** - Thực tập sinh Kỹ sư Đám mây, First Cloud AI Journey.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
 
-### Nội Dung Nổi Bật
+### Nội dung chính
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Xu hướng chuyển đổi: Mô hình ML truyền thống và Mô hình nền
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+- **Mô hình ML truyền thống**: Tập trung vào những nhiệm vụ riêng lẻ (Specific tasks), yêu cầu dữ liệu được dán nhãn (Labeled data), quy trình Huấn luyện/Triển khai phức tạp cho từng mục tiêu.
+- **Mô hình nền (FM)**: Được đào tạo trên khối lượng dữ liệu không cấu trúc khổng lồ (Unlabeled data), có thể thích ứng cho nhiều tác vụ khác nhau như: Tạo văn bản, Tóm tắt, Hỏi đáp, Chatbot.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Hệ sinh thái AI trên nền tảng AWS
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+- **Amazon Bedrock**: Nền tảng tập hợp các mô hình FM hàng đầu từ các đối tác của AWS (AI21 Labs, Anthropic, Cohere, Meta, Stability AI,...) và mô hình của chính Amazon.
+- **Các Dịch vụ AI Chuyên biệt của AWS**: Có thể xem như những "giải pháp có sẵn", được tối ưu cho từng tác vụ cụ thể mà không cần huấn luyện mô hình:
+    - Amazon Rekognition: Nhận diện đối tượng, Nhận diện khuôn mặt, Nhận diện cảm xúc, Nhận diện người nổi tiếng, Phân tích video - 0.001$/ảnh cho 1 triệu ảnh đầu.
+    - Amazon Translate: Dịch văn bản đa ngôn ngữ thời gian thực với độ chính xác cao và văn phong tự nhiên.
+    - Amazon Textract: Trích xuất thông tin có cấu trúc (bảng biểu, mẫu đơn) từ tài liệu scan hoặc PDF.
+    - Amazon Transcribe: Chuyển đổi giọng nói thành văn bản.
+    - Amazon Polly: Chuyển đổi văn bản thành giọng nói.
+    - Amazon Comprehend: Phân tích cảm xúc văn bản, trích xuất từ khóa và phân loại chủ đề tự động.
+    - Amazon Kendra: Cho phép tìm kiếm thông tin trong tài liệu nội bộ bằng ngôn ngữ tự nhiên.
+    - Amazon Lookout: Phát hiện bất thường trong dây chuyền sản xuất hoặc thiết bị công nghiệp để bảo trì dự đoán.
+    - Amazon Personalize: Xây dựng hệ thống đề xuất theo thời gian thực dựa trên công nghệ học máy.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Kỹ thuật Định hướng (Prompting): Chuỗi suy nghĩ (Chain of Thought - CoT)
 
-#### Domain-Driven Design (DDD)
+- So sánh giữa **Định hướng Tiêu chuẩn** (hỏi trực tiếp kết quả) và **Định hướng Chuỗi Suy nghĩ**.
+- CoT hướng dẫn mô hình lập luận từng bước để giải quyết các bài toán logic phức tạp, giúp cải thiện đáng kể độ chính xác so với việc chỉ đưa ra câu trả lời cuối.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Kỹ thuật RAG (Retrieval Augmented Generation) – Trọng tâm kỹ thuật
 
-#### Event-Driven Architecture
+- **Vấn đề**: Giải quyết hiện tượng "ảo giác" và thiếu thông tin cập nhật của các mô hình LLM.
+- **Giải pháp**: Kết hợp khả năng truy xuất (Retrieval) từ Cơ sở Kiến thức bên ngoài với khả năng tạo sinh (Generation) của LLM.
+- **Quy trình thu thập dữ liệu (Data Ingestion)**:
+    1. Dữ liệu thô (New data) → Chia nhỏ (Chunking).
+    2. Xử lý qua Mô hình Embedding (ví dụ: Amazon Titan Text Embeddings V2.0).
+    3. Lưu trữ dưới dạng vector vào Kho lưu trữ Vector (OpenSearch Serverless, Pinecone, Redis...).
+- **RetrieveAndGenerate API**: API quản lý toàn bộ quy trình từ nhận đầu vào người dùng → tạo query embedding → truy xuất dữ liệu → bổ sung ngữ cảnh (augment prompt) → tạo ra câu trả lời.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+### Kiến thức thu nhận được
 
-#### Compute Evolution
+#### Về Tư duy AI và Đám mây
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+- Hiểu rõ khi nào nên sử dụng **Các Dịch vụ AI Chuyên biệt** cho bài toán nhanh, cụ thể và khi nào dùng **Bedrock/GenAI** cho bài toán sáng tạo, phức tạp.
+- Nắm vững tư duy thiết kế hệ thống RAG: Không chỉ đơn thuần là gọi API LLM, mà là bài toán quản lý dữ liệu và vector hóa để cung cấp ngữ cảnh chính xác cho AI tạo ra phản hồi tốt hơn.
 
-#### Amazon Q Developer
+#### Về Kiến trúc Kỹ thuật
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+- Kỹ thuật **Chuỗi Suy nghĩ (CoT)** là chìa khóa để tối ưu kết quả đầu ra của mô hình mà không cần tinh chỉnh (fine-tuning).
+- Hiểu sâu vai trò của **Amazon Titan Embeddings V2.0** trong việc chuyển đổi văn bản đa ngôn ngữ thành vector (hỗ trợ 100+ ngôn ngữ, kích thước vector linh hoạt 256/512/1024).
 
-### Những Gì Học Được
+### Kế hoạch áp dụng vào công việc
+- Ứng dụng Amazon Bedrock cho dự án hiện tại: Amazon Rekognition để nhận diện món ăn từ ảnh nhằm tự động điền thông tin calo; Amazon Comprehend để phân tích văn bản nhằm chuẩn hóa tên món ăn và ghi nhận dữ liệu calo.
+- Thử nghiệm áp dụng kỹ thuật RAG cho dự án hiện tại.
+- Sử dụng Bedrock Agents để điều phối các tác vụ như truy vấn món ăn từ kho vector, tính toán mục tiêu calo và xây dựng thực đơn hàng ngày.
 
-#### Tư Duy Thiết Kế
+### Trải nghiệm tham gia sự kiện
+Tham gia workshop Generative AI với Amazon Bedrock đem lại góc nhìn thực tế về cách xây dựng ứng dụng AI hiện đại, từ lý thuyết nền tảng đến triển khai thực tế.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+#### Kiến thức thực tiễn từ chuyên gia
+- Các diễn giả đã trình bày rõ ràng luồng dữ liệu trong một hệ thống **RAG**, giúp tôi hình dung được cách hoạt động phía sau các ứng dụng Chatbot hiện nay.
+- Việc phân tích rõ ràng sự khác biệt giữa **Mô hình ML truyền thống** và **Generative AI** giúp tôi định hình lại chiến lược lựa chọn công nghệ cho các dự án sắp tới.
 
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+#### Trải nghiệm công nghệ
+- Ấn tượng với **RetrieveAndGenerate API** của Bedrock vì nó giúp giảm đáng kể công sức lập trình thủ công cho phần kết nối giữa Kho Vector và LLM.
+- Thấy được sức mạnh của **Amazon Titan Embedding** trong hỗ trợ đa ngôn ngữ, rất phù hợp với ứng dụng tại thị trường Việt Nam.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- RAG là tiêu chuẩn mới: Để ứng dụng AI trong doanh nghiệp, RAG gần như bắt buộc để đảm bảo tính chính xác và bảo mật dữ liệu.
+- Hệ sinh thái toàn diện: AWS cung cấp đầy đủ từ hạ tầng (Kho Vector) đến tầng mô hình (Bedrock) và tầng ứng dụng (Agents), giúp việc triển khai trở nên nhanh chóng hơn nhiều.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+#### Một Số Hình Ảnh Khi Tham Gia Sự Kiện
+
+![Hình ảnh](/images/2-Proposal/genaigenai.png)
+![Hình ảnh](/images/2-Proposal/genai1.png)
+![Hình ảnh](/images/2-Proposal/genai2.png)
+![Hình ảnh](/images/2-Proposal/genai3.png)
+
+> Tổng quan, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các nhóm.
