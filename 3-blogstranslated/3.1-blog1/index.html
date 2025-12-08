@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/aws-workshop/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws-workshop/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.150.0">
@@ -15,21 +15,21 @@
     <title>Blog 1 :: Internship Report</title>
 
     
-    <link href="../../css/nucleus.css?1765197566" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1765197566" rel="stylesheet">
-    <link href="../../css/hybrid.css?1765197566" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1765197566" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1765197566" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1765197566" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1765197566" rel="stylesheet">
-    <link href="../../css/theme.css?1765197566" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1765197566" rel="stylesheet">
+    <link href="../../css/nucleus.css?1765199121" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1765199121" rel="stylesheet">
+    <link href="../../css/hybrid.css?1765199121" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1765199121" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1765199121" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1765199121" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1765199121" rel="stylesheet">
+    <link href="../../css/theme.css?1765199121" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1765199121" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1765197566" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1765199121" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1765197566"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1765199121"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1765197566"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1765197566"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1765199121"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1765199121"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/github.com\/HuynhLeDuc\/aws-workshop.git\/";
+        var baseurl = "http:\/\/localhost:1313\/aws-workshop\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1765197566"></script>
+<script type="text/javascript" src="../../js/search.js?1765199121"></script>
  
   </div>
 
@@ -743,7 +743,7 @@
                        
                 <option
                   id="en"
-                  value="https://github.com/HuynhLeDuc/aws-workshop.git/3-blogstranslated/3.1-blog1/"
+                  value="http://localhost:1313/aws-workshop/3-blogstranslated/3.1-blog1/"
                   selected
                 >
                   English
@@ -751,7 +751,7 @@
                             
                 <option
                   id="vi"
-                  value="https://github.com/HuynhLeDuc/aws-workshop.git/vi/3-blogstranslated/3.1-blog1/"
+                  value="http://localhost:1313/aws-workshop/vi/3-blogstranslated/3.1-blog1/"
                 >
                   Tiếng Việt
                 </option>
@@ -878,24 +878,28 @@
                     <div class="progress">
   <div class="wrapper"><nav id="TableOfContents">
   <ul>
-    <li><a href="#overview-of-the-solution">Overview of the solution</a></li>
-    <li><a href="#setting-up-your-development-environment">Setting Up Your Development Environment</a>
+    <li><a href="#modernizing-java-applications-with-amazon-q-developer-and-visual-studio-code">Modernizing Java Applications with Amazon Q Developer and Visual Studio Code</a>
       <ul>
-        <li><a href="#configure-visual-studio-code-vscode-with-multiple-jdks">Configure Visual Studio Code (VSCode) with Multiple JDKs</a></li>
-        <li><a href="#integrating-visual-studio-code-with-amazon-q-developer-transform">Integrating Visual Studio Code with Amazon Q Developer: Transform</a></li>
+        <li><a href="#overview-of-the-solution">Overview of the solution</a></li>
+        <li><a href="#setting-up-your-development-environment">Setting Up Your Development Environment</a>
+          <ul>
+            <li><a href="#configure-visual-studio-code-vscode-with-multiple-jdks">Configure Visual Studio Code (VSCode) with Multiple JDKs</a></li>
+            <li><a href="#integrating-visual-studio-code-with-amazon-q-developer-transform">Integrating Visual Studio Code with Amazon Q Developer: Transform</a></li>
+          </ul>
+        </li>
+        <li><a href="#transforming-java-applications">Transforming Java Applications</a>
+          <ul>
+            <li><a href="#java-8-to-java-21-transformation">Java 8 to Java 21 Transformation</a></li>
+            <li><a href="#review-transformation-plan">Review Transformation plan</a></li>
+            <li><a href="#review-transformation-summary">Review Transformation Summary</a></li>
+            <li><a href="#java-11-to-java-21-transformation">Java 11 to Java 21 Transformation</a></li>
+            <li><a href="#unit-testing">Unit Testing</a></li>
+          </ul>
+        </li>
+        <li><a href="#benefits-and-impact">Benefits and Impact</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </li>
-    <li><a href="#transforming-java-applications">Transforming Java Applications</a>
-      <ul>
-        <li><a href="#java-8-to-java-21-transformation">Java 8 to Java 21 Transformation</a></li>
-        <li><a href="#review-transformation-plan">Review Transformation plan</a></li>
-        <li><a href="#review-transformation-summary">Review Transformation Summary</a></li>
-        <li><a href="#java-11-to-java-21-transformation">Java 11 to Java 21 Transformation</a></li>
-        <li><a href="#unit-testing">Unit Testing</a></li>
-      </ul>
-    </li>
-    <li><a href="#benefits-and-impact">Benefits and Impact</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav></div>
 </div>
@@ -1611,19 +1615,19 @@ As an option, use Amazon Corretto to download multiple versions of JDK. Amazon C
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1765197566"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1765197566"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1765197566"></script>
-    <script src="../../js/jquery.sticky.js?1765197566"></script>
-    <script src="../../js/featherlight.min.js?1765197566"></script>
-    <script src="../../js/highlight.pack.js?1765197566"></script>
+    <script src="../../js/clipboard.min.js?1765199121"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1765199121"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1765199121"></script>
+    <script src="../../js/jquery.sticky.js?1765199121"></script>
+    <script src="../../js/featherlight.min.js?1765199121"></script>
+    <script src="../../js/highlight.pack.js?1765199121"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1765197566"></script>
-    <script src="../../js/learn.js?1765197566"></script>
-    <script src="../../js/hugo-learn.js?1765197566"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1765199121"></script>
+    <script src="../../js/learn.js?1765199121"></script>
+    <script src="../../js/hugo-learn.js?1765199121"></script>
 
-    <link href="../../mermaid/mermaid.css?1765197566" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1765197566"></script>
+    <link href="../../mermaid/mermaid.css?1765199121" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1765199121"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
