@@ -5,114 +5,132 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
-
 # FoodMind Recommender Platform For Prompt-IPoG
-## A Unified AWS Serverless Solution for Intelligent Restaurant Recommendation Based on User Experience
+## An integrated AWS Serverless solution for personalized meal tracking and recommendations. 
 
 ### 1. Executive Summary  
-**AI Food Recommender Platform** is an intelligent web platform designed to help users discover suitable restaurants based on real data from customer reviews and emotions. The platform uses an AI Sentiment Analysis model deployed on Amazon SageMaker, combined with AWS Bedrock to process raw data (user reviews, restaurant descriptions), creating a standardized database for recommendation.
+**FoodMind Recommender Platform** is an intelligent web platform designed to serve as a personalized eating assistant. It automatically calculates the user's Total Daily Energy Expenditure (TDEE) based on their profile and leverages **AWS Bedrock (Generative AI)** to allow users to log meals in natural language (e.g., “I just ate a bowl of beef pho”).  
+The system also provides intelligent meal recommendations (Breakfast/Lunch/Dinner) by automatically **filtering** dishes according to calorie goals and health constraints (e.g., “allergies”, “gout”).  
 
-The web interface is built on AWS Amplify (Next.js), allowing users to search and explore restaurants through an intelligent embedding-based search bar. Data is stored and queried via Amazon RDS, ensuring high performance and flexible scalability.  
-The solution focuses on the integration of AI and real-world data to support decision-making in finding restaurants based on user emotions, experiences, and preferences.
+The entire solution is built on a **serverless architecture** with AWS Amplify (Frontend), API Gateway, AWS Lambda, and Amazon DynamoDB (Backend). It enables users to receive meal recommendations based on their calculated calorie intake for the day. Data is stored and queried through Amazon DynamoDB, ensuring high performance and flexible scalability.  
+
+The solution emphasizes the combination of AI and real-world data to support smart meal decision-making and offers a **dashboard** for users to track their eating habits effectively.  
 
 ### 2. Problem Statement  
 **Current Problem**  
-With the growing number of restaurants, finding a place that fits personal preferences and needs becomes difficult. Many applications like Google Maps mainly show restaurant lists based on ratings or ads, without truly personalized experiences. Users often have to read dozens of reviews to understand food quality, service, or atmosphere. Sentiment and description analysis are still manual and lack personalization capability.
+Many users struggle to manage their daily diet — they don’t know how many calories to consume or which foods suit their daily health goals. Manual logging and nutritional lookup are time-consuming, inaccurate, and not personalized.  
 
 **Solution**  
-The AI FoodMind Recommender platform uses user reviews from Google Maps, then:  
-- **Amazon S3** stores the collected raw data.  
-- **AWS Bedrock** processes the raw data to generate descriptions, embeddings, and extract related aspects (food type, emotion, service quality, price level, etc.).  
-- **Amazon SageMaker** deploys a Sentiment Analysis model from Hugging Face to analyze the sentiment in reviews.  
-- **Amazon RDS** stores the processed data and embeddings for semantic search.  
-- **AWS Amplify** deploys the web UI (Next.js) and integrates Amazon Cognito for user management.  
-- **AWS Lambda** and **API Gateway** connect the frontend, backend, and AI model.
+FoodMind Recommender Platform applies **AI and AWS Cloud** to automate the entire meal tracking and recommendation process:  
 
-The system allows users to search in natural language such as “good pho, fast service in District 3”, and receive suitable results based on emotions, quality, and real descriptions.
+**Goal Automation:** Automatically calculates calorie targets (using the Mifflin-St Jeor formula) when users update their profiles.  
 
-**Benefits and ROI (Return on Investment)**  
-- Optimize restaurant search experience through emotional factors instead of rating only.  
-- Create a standardized database for AI research in the food and user behavior domain.  
-- Low cost thanks to serverless architecture (using AWS free tier).  
-- ROI estimate: payback within 6 months through time-saving development and reuse of existing AI models.  
-- Estimated cost: about 15–20 USD/month.
+**Recommendation Automation:** Provides a `GET /recommendations` API using **Lambda business logic** to filter dishes from the database based on calorie targets (e.g., lunch < 700 calories) and health restrictions (e.g., avoid “red meat” for gout).  
+
+**AI Logging Automation:** Provides a `POST /log-food` API using **AWS Bedrock** to parse natural language input, extract calories, and store logs.  
+
+**Self-learning Automation:** When users log a new dish (e.g., “bun dau mam tom”) unknown to the system, **AWS Bedrock** estimates its calories and automatically adds it to the knowledge base.  
+
+**Visual Tracking:** The **dashboard (Amplify)** displays a 7-day meal history, helping users monitor and manage their dietary habits.  
+
+Users simply input data — the system understands, analyzes, and recommends suitable meals tailored to personal health goals.  
+
+**Benefits and ROI**  
+- Saves time on nutrition tracking, eliminates manual work.  
+- Offers highly personalized AI experience.  
+- Creates a structured dataset for AI research in food and nutrition.  
+- Low cost thanks to serverless architecture.  
+- Scalable and reusable for other health-related applications.  
+- ROI estimate: payback within 6 months through reduced development time and model reuse.  
+- Estimated cost: around **10–15 USD/month**.  
 
 ### 3. Solution Architecture  
-The platform applies an AI-as-a-Service architecture combined with AWS Serverless, ensuring scalability, cost optimization, and easy maintenance. Data is temporarily stored in Amazon S3, then processed by AWS Lambda and AWS Bedrock for normalization, description generation, and embedding creation. Amazon SageMaker is used to analyze sentiment in reviews, and results are stored in Amazon RDS. AWS Amplify hosts the web interface (Next.js) and Amazon Cognito ensures secure user authentication. The architecture is detailed below:
+The platform is fully built on **AI-as-a-Service** combined with **AWS Serverless**, ensuring high performance, security, and scalability. Nutritional data on dishes is stored in **Amazon DynamoDB**, which supports generating meal recommendations based on calculated calorie targets. **Amazon Bedrock** processes user natural language to extract calorie information and log meals in DynamoDB. **AWS Amplify** hosts the Next.js web interface, and **Amazon Cognito** ensures secure user authentication. The architecture is detailed below:
 
-![FoodMind Recommender Platform Architecture](/images/2-Proposal/Architecture.png)
+![alt text](/images/2-Proposal/Architecture.jpg)
 
-**AWS Services Used**  
-- **AWS Lambda**: Handles application logic and calls AI services (3 functions).  
-- **Amazon S3**: Stores raw data.  
-- **Amazon SageMaker**: Deploys sentiment model from Hugging Face.  
-- **Amazon API Gateway**: Communicates with the web application.  
-- **AWS Bedrock**: Generates descriptions, embeddings, and normalizes data.  
-- **Amazon RDS (PostgreSQL)**: Stores standardized restaurant data and embeddings.  
-- **AWS Amplify**: Hosts the Next.js web interface.  
-- **Amazon Cognito**: Manages users and authentication.  
+**AWS Services Used**
+
+- **AWS Amplify:** Deploys and hosts the web interface (Next.js), integrates with GitLab CI/CD for auto build and deploy.  
+- **Amazon Route 53 + AWS WAF + Amazon CloudFront:** Edge layer for secure and fast content delivery worldwide.  
+- **Amazon Cognito:** Manages user authentication, login, and access control.  
+- **Amazon API Gateway:** Provides endpoints for `GET /Recommendation`, `POST /Log`, `GET /Dashboard`, connected to Lambda.  
+- **AWS Lambda (Private Subnet):** Handles business logic, calls Bedrock and DynamoDB via VPC Endpoints for security.  
+- **AWS Bedrock:** Generates dish descriptions, normalizes meal logs, and stores them in DynamoDB for personalized recommendations.  
+- **Amazon DynamoDB:** Stores user data, meal logs, calorie goals, and recommendation data with scalable performance.  
+- **AWS Secrets Manager:** Secures credentials (API Keys, Bedrock access) for Lambda and backend.  
+- **Amazon CloudWatch & AWS CloudTrail:** Monitors logs, access, and performance; supports incident recovery.  
+- **Amazon S3:** Stores system logs and backups.  
+- **AWS IAM:** Manages detailed access permissions between services and users.  
+- **Amazon VPC:** Isolates Lambda in a private subnet to ensure secure internal communication between Lambda, DynamoDB, and Bedrock.  
 
 **Component Design**  
-- **Data Collection**: Collect raw data and store temporarily in Amazon S3.  
-- **Model Deployment**: Deploy sentiment model on SageMaker Endpoint.  
-- **Data Processing**: AWS Bedrock and SageMaker retrieve data from Amazon S3, process, and store results in Amazon RDS.  
-- **Backend Construction**: Lambda, API Gateway, and RDS connection.  
-- **Web Interface**: Hosts Next.js app with intelligent search for restaurant recommendation based on user experiences.  
-- **User Management**: Amazon Cognito manages user access.  
+
+- **User Management:** Amazon Cognito controls user access.  
+- **Content Delivery & Security:** Route 53 routes domain, WAF prevents web attacks (SQL Injection, DDoS), CloudFront speeds up global delivery.  
+- **Web Interface:** Amplify hosts the Next.js app.  
+- **Meal Logging & Recommendation:** User input (text) stored in DynamoDB; Lambda recommends dishes based on calorie calculations.  
+- **Meal Analysis:** Lambda calls Bedrock to process user input, extract calorie data, and log new dishes in DynamoDB if missing.  
+- **Dashboard Display:** Amplify shows calorie charts by day/week/month.  
+- **Authentication & Security:** Cognito ensures secure login and user management.  
+- **Monitoring & Tracking:** CloudWatch monitors logs and Lambda performance; CloudTrail records API and user activity history.  
 
 ### 4. Technical Implementation  
-**Implementation Stages**  
-- Research and design architecture: Build AI + Cloud pipeline, validate feasibility, and design AWS architecture diagram (first 5 weeks).  
-- Cost estimation and optimization: Adjust architecture for cost efficiency (Week 6).  
-- Development, Testing, and Deployment: Store raw data, process and store clean data using AWS services, then build web interface with Next.js, test performance, and deploy (Week 7–11).
+**Implementation Phases**  
+- **Research & Design:** Build AI + Cloud pipeline, check feasibility, and design AWS architecture (Weeks 1–5).  
+- **Cost Optimization:** Validate AWS service pricing to optimize budget (Week 6).  
+- **Development & Deployment:** Load initial data, build Next.js frontend, test APIs, and deploy final product (Weeks 7–11).  
 
 **Technical Requirements**  
-- *User experience data*: Includes reviews, ratings, services, atmosphere, etc. Schedule Lambda to fetch data monthly and process new data.  
-- *Recommendation platform*: Requires knowledge of AWS Amplify (Next.js hosting), Lambda, S3 (2 buckets), Cognito, Bedrock, RDS, API Gateway. Use AWS CDK/SDK for programming. Next.js helps reduce Lambda load for the web app.  
+- *Calorie Dataset:* Collect initial data and load into DynamoDB using AWS SDK (Boto3).  
+- *Recommendation Platform:* Requires knowledge of AWS Amplify (Next.js hosting), S3, Cognito, and Serverless stack (Lambda, DynamoDB, API Gateway), DynamoDB schema (PK, SK), and Bedrock API integration.  
 
-### 5. Timeline & Milestones  
-- *Internship (January–March)*:  
-  - January: Study AWS and upgrade hardware.  
-  - February: Design and adjust architecture.  
-  - March: Implement, test, and deploy the platform.  
-- *Post-deployment*: Monitor, improve recommendation system, and expand dataset within 1 year.
+### 5. Roadmap & Milestones  
+- **Internship (Jan–Mar):**  
+  - **January:** Learn and master AWS services.  
+  - **February:** Design and refine architecture.  
+  - **March:** Deploy, test, and launch the system.  
+- **Post-deployment:** Maintain, enhance recommendations, and expand data within one year.  
 
 ### 6. Budget Estimation  
-You can view the cost estimation on [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-or download the [budget estimation file](../attachments/budget_estimation.pdf).  
+Cost reference: [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
+Or download [budget estimation file](../attachments/budget_estimation.pdf).  
 
-**Infrastructure Costs**
+**Infrastructure Cost**
 
-- AWS Amplify: 0.50 USD/month (~100 MB, low traffic).  
-- AWS Lambda: 0.20 USD/month (100,000 requests/month, avg runtime <1s).  
-- Amazon API Gateway: 0.10 USD/month (50,000 REST API requests/month).  
-- Amazon RDS (PostgreSQL): 0.00 USD/month (Free Tier 750 hours/month).  
-- AWS S3 (Standard): 0.10 USD/month (2 GB data).  
-- Amazon SageMaker Endpoint: 4.00 USD/month (~100 hours/month).  
-- AWS Bedrock: 3.00 USD/month (a few thousand tokens/month).  
-- Amazon Cognito: 0.00 USD/month (<50 active users, Free Tier).  
+- **AWS Amplify:** 0.50 USD/month (~100 MB, low traffic).  
+- **AWS Lambda:** 0.20–0.30 USD/month (100,000 requests/month, avg runtime <1s).  
+- **Amazon API Gateway:** 0.10–0.20 USD/month (50,000 REST API requests/month).  
+- **Amazon DynamoDB (Paid Plan):** ~0.30 USD/month (50 MB data, ~20,000 requests/month, On-Demand).  
+- **Amazon S3 (log/backup):** 0.10 USD/month (<2GB).  
+- **AWS Bedrock:** 3.00–5.00 USD/month (a few thousand tokens/month).  
+- **CloudWatch + CloudTrail + IAM:** ~0.10 USD/month.  
+- **Amazon Cognito:** 0.00 USD/month (<50 active users, Free Tier).  
 
-**Total**: ~8 USD/month, ~96 USD/year  
+**Total:** ~4–6 USD/month (~50–75 USD/year).  
 
 ### 7. Risk Assessment  
-*Risk Matrix*  
-- Network outage: Medium impact, Medium probability.  
-- API request overload: Medium impact, Medium probability.  
-- Sentiment data bias: High impact, Low probability.  
-- Budget overrun: Medium impact, Low probability.  
+**Risk Matrix**  
+- AI misinterpretation — High impact, Low probability.  
+- API overload — Medium impact, Low probability.  
+- Budget overrun — Medium impact, Low probability.  
+- Logic error — Medium impact, Low probability.  
 
-*Mitigation Strategies*  
-- Network: Local storage on Raspberry Pi with Docker.  
-- API overload: Limit access through API Gateway.  
-- Sentiment bias: Periodically recalibrate the model.  
-- Cost: AWS budget alerts and service optimization.  
+**Mitigation Strategies**  
+- AI deviation: Careful prompt engineering.  
+- API overload: Request throttling via API Gateway.  
+- Budget: AWS budget alerts and service optimization.  
+- Logic: Rigorous Lambda testing and validation.  
 
-*Contingency Plan*  
-- Revert to manual data collection if AWS outage occurs.  
-- Use CloudFormation to restore cost-related configurations.  
+**Contingency Plan**  
+- Manual data collection fallback if AWS outage occurs.  
+- Use CloudFormation to restore infrastructure configurations.  
 
 ### 8. Expected Outcomes  
-**Enhanced user experience**: Restaurant recommendations based on emotions and real descriptions.  
-**Practical AI integration**: Applying Bedrock + SageMaker in a complete product system.  
-**Reusable data foundation**: For research on emotional AI and customer behavior.  
-**Scalability**: Expand to include factors like “location,” “culinary trends,” and “seasonal dishes.”  
+**Enhanced User Experience:** Provides a smart meal assistant, removing manual effort in tracking and choosing meals.  
+
+**Practical AI Integration:** Demonstrates real-world AWS Bedrock integration in production-level systems.  
+
+**Nutrition Data Foundation:** Expandable dataset for AI and healthcare research.  
+
+**Scalability:** Extendable to image-based food analysis, AI chat coaching, and mobile applications.  

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/aws-workshop/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws-workshop/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.150.0">
@@ -15,21 +15,21 @@
     <title>Proposal :: Internship Report</title>
 
     
-    <link href="../css/nucleus.css?1765201366" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1765201366" rel="stylesheet">
-    <link href="../css/hybrid.css?1765201366" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1765201366" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1765201366" rel="stylesheet">
-    <link href="../css/auto-complete.css?1765201366" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1765201366" rel="stylesheet">
-    <link href="../css/theme.css?1765201366" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1765201366" rel="stylesheet">
+    <link href="../css/nucleus.css?1765202472" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1765202472" rel="stylesheet">
+    <link href="../css/hybrid.css?1765202472" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1765202472" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1765202472" rel="stylesheet">
+    <link href="../css/auto-complete.css?1765202472" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1765202472" rel="stylesheet">
+    <link href="../css/theme.css?1765202472" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1765202472" rel="stylesheet">
     
-    <link href="../css/theme-workshop.css?1765201366" rel="stylesheet">
+    <link href="../css/theme-workshop.css?1765202472" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1765201366"></script>
+    <script src="../js/jquery-3.3.1.min.js?1765202472"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1765201366"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1765201366"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1765202472"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1765202472"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/huynhleduc.github.io\/aws-workshop\/";
+        var baseurl = "http:\/\/localhost:1313\/aws-workshop\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1765201366"></script>
+<script type="text/javascript" src="../js/search.js?1765202472"></script>
  
   </div>
 
@@ -743,7 +743,7 @@
                        
                 <option
                   id="en"
-                  value="https://huynhleduc.github.io/aws-workshop/2-proposal/"
+                  value="http://localhost:1313/aws-workshop/2-proposal/"
                   selected
                 >
                   English
@@ -751,7 +751,7 @@
                             
                 <option
                   id="vi"
-                  value="https://huynhleduc.github.io/aws-workshop/vi/2-proposal/"
+                  value="http://localhost:1313/aws-workshop/vi/2-proposal/"
                 >
                   Tiếng Việt
                 </option>
@@ -874,13 +874,13 @@
   <ul>
     <li><a href="#foodmind-recommender-platform-for-prompt-ipog">FoodMind Recommender Platform For Prompt-IPoG</a>
       <ul>
-        <li><a href="#a-unified-aws-serverless-solution-for-intelligent-restaurant-recommendation-based-on-user-experience">A Unified AWS Serverless Solution for Intelligent Restaurant Recommendation Based on User Experience</a>
+        <li><a href="#an-integrated-aws-serverless-solution-for-personalized-meal-tracking-and-recommendations">An integrated AWS Serverless solution for personalized meal tracking and recommendations.</a>
           <ul>
             <li><a href="#1-executive-summary">1. Executive Summary</a></li>
             <li><a href="#2-problem-statement">2. Problem Statement</a></li>
             <li><a href="#3-solution-architecture">3. Solution Architecture</a></li>
             <li><a href="#4-technical-implementation">4. Technical Implementation</a></li>
-            <li><a href="#5-timeline--milestones">5. Timeline &amp; Milestones</a></li>
+            <li><a href="#5-roadmap--milestones">5. Roadmap &amp; Milestones</a></li>
             <li><a href="#6-budget-estimation">6. Budget Estimation</a></li>
             <li><a href="#7-risk-assessment">7. Risk Assessment</a></li>
             <li><a href="#8-expected-outcomes">8. Expected Outcomes</a></li>
@@ -913,119 +913,125 @@
 
 
 	<h1 id="foodmind-recommender-platform-for-prompt-ipog">FoodMind Recommender Platform For Prompt-IPoG</h1>
-<h2 id="a-unified-aws-serverless-solution-for-intelligent-restaurant-recommendation-based-on-user-experience">A Unified AWS Serverless Solution for Intelligent Restaurant Recommendation Based on User Experience</h2>
+<h2 id="an-integrated-aws-serverless-solution-for-personalized-meal-tracking-and-recommendations">An integrated AWS Serverless solution for personalized meal tracking and recommendations.</h2>
 <h3 id="1-executive-summary">1. Executive Summary</h3>
-<p><strong>AI Food Recommender Platform</strong> is an intelligent web platform designed to help users discover suitable restaurants based on real data from customer reviews and emotions. The platform uses an AI Sentiment Analysis model deployed on Amazon SageMaker, combined with AWS Bedrock to process raw data (user reviews, restaurant descriptions), creating a standardized database for recommendation.</p>
-<p>The web interface is built on AWS Amplify (Next.js), allowing users to search and explore restaurants through an intelligent embedding-based search bar. Data is stored and queried via Amazon RDS, ensuring high performance and flexible scalability.<br>
-The solution focuses on the integration of AI and real-world data to support decision-making in finding restaurants based on user emotions, experiences, and preferences.</p>
+<p><strong>FoodMind Recommender Platform</strong> is an intelligent web platform designed to serve as a personalized eating assistant. It automatically calculates the user&rsquo;s Total Daily Energy Expenditure (TDEE) based on their profile and leverages <strong>AWS Bedrock (Generative AI)</strong> to allow users to log meals in natural language (e.g., “I just ate a bowl of beef pho”).<br>
+The system also provides intelligent meal recommendations (Breakfast/Lunch/Dinner) by automatically <strong>filtering</strong> dishes according to calorie goals and health constraints (e.g., “allergies”, “gout”).</p>
+<p>The entire solution is built on a <strong>serverless architecture</strong> with AWS Amplify (Frontend), API Gateway, AWS Lambda, and Amazon DynamoDB (Backend). It enables users to receive meal recommendations based on their calculated calorie intake for the day. Data is stored and queried through Amazon DynamoDB, ensuring high performance and flexible scalability.</p>
+<p>The solution emphasizes the combination of AI and real-world data to support smart meal decision-making and offers a <strong>dashboard</strong> for users to track their eating habits effectively.</p>
 <h3 id="2-problem-statement">2. Problem Statement</h3>
 <p><strong>Current Problem</strong><br>
-With the growing number of restaurants, finding a place that fits personal preferences and needs becomes difficult. Many applications like Google Maps mainly show restaurant lists based on ratings or ads, without truly personalized experiences. Users often have to read dozens of reviews to understand food quality, service, or atmosphere. Sentiment and description analysis are still manual and lack personalization capability.</p>
+Many users struggle to manage their daily diet — they don’t know how many calories to consume or which foods suit their daily health goals. Manual logging and nutritional lookup are time-consuming, inaccurate, and not personalized.</p>
 <p><strong>Solution</strong><br>
-The AI FoodMind Recommender platform uses user reviews from Google Maps, then:</p>
+FoodMind Recommender Platform applies <strong>AI and AWS Cloud</strong> to automate the entire meal tracking and recommendation process:</p>
+<p><strong>Goal Automation:</strong> Automatically calculates calorie targets (using the Mifflin-St Jeor formula) when users update their profiles.</p>
+<p><strong>Recommendation Automation:</strong> Provides a <code>GET /recommendations</code> API using <strong>Lambda business logic</strong> to filter dishes from the database based on calorie targets (e.g., lunch &lt; 700 calories) and health restrictions (e.g., avoid “red meat” for gout).</p>
+<p><strong>AI Logging Automation:</strong> Provides a <code>POST /log-food</code> API using <strong>AWS Bedrock</strong> to parse natural language input, extract calories, and store logs.</p>
+<p><strong>Self-learning Automation:</strong> When users log a new dish (e.g., “bun dau mam tom”) unknown to the system, <strong>AWS Bedrock</strong> estimates its calories and automatically adds it to the knowledge base.</p>
+<p><strong>Visual Tracking:</strong> The <strong>dashboard (Amplify)</strong> displays a 7-day meal history, helping users monitor and manage their dietary habits.</p>
+<p>Users simply input data — the system understands, analyzes, and recommends suitable meals tailored to personal health goals.</p>
+<p><strong>Benefits and ROI</strong></p>
 <ul>
-<li><strong>Amazon S3</strong> stores the collected raw data.</li>
-<li><strong>AWS Bedrock</strong> processes the raw data to generate descriptions, embeddings, and extract related aspects (food type, emotion, service quality, price level, etc.).</li>
-<li><strong>Amazon SageMaker</strong> deploys a Sentiment Analysis model from Hugging Face to analyze the sentiment in reviews.</li>
-<li><strong>Amazon RDS</strong> stores the processed data and embeddings for semantic search.</li>
-<li><strong>AWS Amplify</strong> deploys the web UI (Next.js) and integrates Amazon Cognito for user management.</li>
-<li><strong>AWS Lambda</strong> and <strong>API Gateway</strong> connect the frontend, backend, and AI model.</li>
-</ul>
-<p>The system allows users to search in natural language such as “good pho, fast service in District 3”, and receive suitable results based on emotions, quality, and real descriptions.</p>
-<p><strong>Benefits and ROI (Return on Investment)</strong></p>
-<ul>
-<li>Optimize restaurant search experience through emotional factors instead of rating only.</li>
-<li>Create a standardized database for AI research in the food and user behavior domain.</li>
-<li>Low cost thanks to serverless architecture (using AWS free tier).</li>
-<li>ROI estimate: payback within 6 months through time-saving development and reuse of existing AI models.</li>
-<li>Estimated cost: about 15–20 USD/month.</li>
+<li>Saves time on nutrition tracking, eliminates manual work.</li>
+<li>Offers highly personalized AI experience.</li>
+<li>Creates a structured dataset for AI research in food and nutrition.</li>
+<li>Low cost thanks to serverless architecture.</li>
+<li>Scalable and reusable for other health-related applications.</li>
+<li>ROI estimate: payback within 6 months through reduced development time and model reuse.</li>
+<li>Estimated cost: around <strong>10–15 USD/month</strong>.</li>
 </ul>
 <h3 id="3-solution-architecture">3. Solution Architecture</h3>
-<p>The platform applies an AI-as-a-Service architecture combined with AWS Serverless, ensuring scalability, cost optimization, and easy maintenance. Data is temporarily stored in Amazon S3, then processed by AWS Lambda and AWS Bedrock for normalization, description generation, and embedding creation. Amazon SageMaker is used to analyze sentiment in reviews, and results are stored in Amazon RDS. AWS Amplify hosts the web interface (Next.js) and Amazon Cognito ensures secure user authentication. The architecture is detailed below:</p>
-<p><img src="../images/2-Proposal/Architecture.png" alt="FoodMind Recommender Platform Architecture"></p>
+<p>The platform is fully built on <strong>AI-as-a-Service</strong> combined with <strong>AWS Serverless</strong>, ensuring high performance, security, and scalability. Nutritional data on dishes is stored in <strong>Amazon DynamoDB</strong>, which supports generating meal recommendations based on calculated calorie targets. <strong>Amazon Bedrock</strong> processes user natural language to extract calorie information and log meals in DynamoDB. <strong>AWS Amplify</strong> hosts the Next.js web interface, and <strong>Amazon Cognito</strong> ensures secure user authentication. The architecture is detailed below:</p>
+<p><img src="../images/2-Proposal/Architecture.jpg" alt="alt text"></p>
 <p><strong>AWS Services Used</strong></p>
 <ul>
-<li><strong>AWS Lambda</strong>: Handles application logic and calls AI services (3 functions).</li>
-<li><strong>Amazon S3</strong>: Stores raw data.</li>
-<li><strong>Amazon SageMaker</strong>: Deploys sentiment model from Hugging Face.</li>
-<li><strong>Amazon API Gateway</strong>: Communicates with the web application.</li>
-<li><strong>AWS Bedrock</strong>: Generates descriptions, embeddings, and normalizes data.</li>
-<li><strong>Amazon RDS (PostgreSQL)</strong>: Stores standardized restaurant data and embeddings.</li>
-<li><strong>AWS Amplify</strong>: Hosts the Next.js web interface.</li>
-<li><strong>Amazon Cognito</strong>: Manages users and authentication.</li>
+<li><strong>AWS Amplify:</strong> Deploys and hosts the web interface (Next.js), integrates with GitLab CI/CD for auto build and deploy.</li>
+<li><strong>Amazon Route 53 + AWS WAF + Amazon CloudFront:</strong> Edge layer for secure and fast content delivery worldwide.</li>
+<li><strong>Amazon Cognito:</strong> Manages user authentication, login, and access control.</li>
+<li><strong>Amazon API Gateway:</strong> Provides endpoints for <code>GET /Recommendation</code>, <code>POST /Log</code>, <code>GET /Dashboard</code>, connected to Lambda.</li>
+<li><strong>AWS Lambda (Private Subnet):</strong> Handles business logic, calls Bedrock and DynamoDB via VPC Endpoints for security.</li>
+<li><strong>AWS Bedrock:</strong> Generates dish descriptions, normalizes meal logs, and stores them in DynamoDB for personalized recommendations.</li>
+<li><strong>Amazon DynamoDB:</strong> Stores user data, meal logs, calorie goals, and recommendation data with scalable performance.</li>
+<li><strong>AWS Secrets Manager:</strong> Secures credentials (API Keys, Bedrock access) for Lambda and backend.</li>
+<li><strong>Amazon CloudWatch &amp; AWS CloudTrail:</strong> Monitors logs, access, and performance; supports incident recovery.</li>
+<li><strong>Amazon S3:</strong> Stores system logs and backups.</li>
+<li><strong>AWS IAM:</strong> Manages detailed access permissions between services and users.</li>
+<li><strong>Amazon VPC:</strong> Isolates Lambda in a private subnet to ensure secure internal communication between Lambda, DynamoDB, and Bedrock.</li>
 </ul>
 <p><strong>Component Design</strong></p>
 <ul>
-<li><strong>Data Collection</strong>: Collect raw data and store temporarily in Amazon S3.</li>
-<li><strong>Model Deployment</strong>: Deploy sentiment model on SageMaker Endpoint.</li>
-<li><strong>Data Processing</strong>: AWS Bedrock and SageMaker retrieve data from Amazon S3, process, and store results in Amazon RDS.</li>
-<li><strong>Backend Construction</strong>: Lambda, API Gateway, and RDS connection.</li>
-<li><strong>Web Interface</strong>: Hosts Next.js app with intelligent search for restaurant recommendation based on user experiences.</li>
-<li><strong>User Management</strong>: Amazon Cognito manages user access.</li>
+<li><strong>User Management:</strong> Amazon Cognito controls user access.</li>
+<li><strong>Content Delivery &amp; Security:</strong> Route 53 routes domain, WAF prevents web attacks (SQL Injection, DDoS), CloudFront speeds up global delivery.</li>
+<li><strong>Web Interface:</strong> Amplify hosts the Next.js app.</li>
+<li><strong>Meal Logging &amp; Recommendation:</strong> User input (text) stored in DynamoDB; Lambda recommends dishes based on calorie calculations.</li>
+<li><strong>Meal Analysis:</strong> Lambda calls Bedrock to process user input, extract calorie data, and log new dishes in DynamoDB if missing.</li>
+<li><strong>Dashboard Display:</strong> Amplify shows calorie charts by day/week/month.</li>
+<li><strong>Authentication &amp; Security:</strong> Cognito ensures secure login and user management.</li>
+<li><strong>Monitoring &amp; Tracking:</strong> CloudWatch monitors logs and Lambda performance; CloudTrail records API and user activity history.</li>
 </ul>
 <h3 id="4-technical-implementation">4. Technical Implementation</h3>
-<p><strong>Implementation Stages</strong></p>
+<p><strong>Implementation Phases</strong></p>
 <ul>
-<li>Research and design architecture: Build AI + Cloud pipeline, validate feasibility, and design AWS architecture diagram (first 5 weeks).</li>
-<li>Cost estimation and optimization: Adjust architecture for cost efficiency (Week 6).</li>
-<li>Development, Testing, and Deployment: Store raw data, process and store clean data using AWS services, then build web interface with Next.js, test performance, and deploy (Week 7–11).</li>
+<li><strong>Research &amp; Design:</strong> Build AI + Cloud pipeline, check feasibility, and design AWS architecture (Weeks 1–5).</li>
+<li><strong>Cost Optimization:</strong> Validate AWS service pricing to optimize budget (Week 6).</li>
+<li><strong>Development &amp; Deployment:</strong> Load initial data, build Next.js frontend, test APIs, and deploy final product (Weeks 7–11).</li>
 </ul>
 <p><strong>Technical Requirements</strong></p>
 <ul>
-<li><em>User experience data</em>: Includes reviews, ratings, services, atmosphere, etc. Schedule Lambda to fetch data monthly and process new data.</li>
-<li><em>Recommendation platform</em>: Requires knowledge of AWS Amplify (Next.js hosting), Lambda, S3 (2 buckets), Cognito, Bedrock, RDS, API Gateway. Use AWS CDK/SDK for programming. Next.js helps reduce Lambda load for the web app.</li>
+<li><em>Calorie Dataset:</em> Collect initial data and load into DynamoDB using AWS SDK (Boto3).</li>
+<li><em>Recommendation Platform:</em> Requires knowledge of AWS Amplify (Next.js hosting), S3, Cognito, and Serverless stack (Lambda, DynamoDB, API Gateway), DynamoDB schema (PK, SK), and Bedrock API integration.</li>
 </ul>
-<h3 id="5-timeline--milestones">5. Timeline &amp; Milestones</h3>
+<h3 id="5-roadmap--milestones">5. Roadmap &amp; Milestones</h3>
 <ul>
-<li><em>Internship (January–March)</em>:
+<li><strong>Internship (Jan–Mar):</strong>
 <ul>
-<li>January: Study AWS and upgrade hardware.</li>
-<li>February: Design and adjust architecture.</li>
-<li>March: Implement, test, and deploy the platform.</li>
+<li><strong>January:</strong> Learn and master AWS services.</li>
+<li><strong>February:</strong> Design and refine architecture.</li>
+<li><strong>March:</strong> Deploy, test, and launch the system.</li>
 </ul>
 </li>
-<li><em>Post-deployment</em>: Monitor, improve recommendation system, and expand dataset within 1 year.</li>
+<li><strong>Post-deployment:</strong> Maintain, enhance recommendations, and expand data within one year.</li>
 </ul>
 <h3 id="6-budget-estimation">6. Budget Estimation</h3>
-<p>You can view the cost estimation on <a href="https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01">AWS Pricing Calculator</a><br>
-or download the <a href="../attachments/budget_estimation.pdf">budget estimation file</a>.</p>
-<p><strong>Infrastructure Costs</strong></p>
+<p>Cost reference: <a href="https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01">AWS Pricing Calculator</a><br>
+Or download <a href="../attachments/budget_estimation.pdf">budget estimation file</a>.</p>
+<p><strong>Infrastructure Cost</strong></p>
 <ul>
-<li>AWS Amplify: 0.50 USD/month (~100 MB, low traffic).</li>
-<li>AWS Lambda: 0.20 USD/month (100,000 requests/month, avg runtime &lt;1s).</li>
-<li>Amazon API Gateway: 0.10 USD/month (50,000 REST API requests/month).</li>
-<li>Amazon RDS (PostgreSQL): 0.00 USD/month (Free Tier 750 hours/month).</li>
-<li>AWS S3 (Standard): 0.10 USD/month (2 GB data).</li>
-<li>Amazon SageMaker Endpoint: 4.00 USD/month (~100 hours/month).</li>
-<li>AWS Bedrock: 3.00 USD/month (a few thousand tokens/month).</li>
-<li>Amazon Cognito: 0.00 USD/month (&lt;50 active users, Free Tier).</li>
+<li><strong>AWS Amplify:</strong> 0.50 USD/month (~100 MB, low traffic).</li>
+<li><strong>AWS Lambda:</strong> 0.20–0.30 USD/month (100,000 requests/month, avg runtime &lt;1s).</li>
+<li><strong>Amazon API Gateway:</strong> 0.10–0.20 USD/month (50,000 REST API requests/month).</li>
+<li><strong>Amazon DynamoDB (Paid Plan):</strong> ~0.30 USD/month (50 MB data, ~20,000 requests/month, On-Demand).</li>
+<li><strong>Amazon S3 (log/backup):</strong> 0.10 USD/month (&lt;2GB).</li>
+<li><strong>AWS Bedrock:</strong> 3.00–5.00 USD/month (a few thousand tokens/month).</li>
+<li><strong>CloudWatch + CloudTrail + IAM:</strong> ~0.10 USD/month.</li>
+<li><strong>Amazon Cognito:</strong> 0.00 USD/month (&lt;50 active users, Free Tier).</li>
 </ul>
-<p><strong>Total</strong>: ~8 USD/month, ~96 USD/year</p>
+<p><strong>Total:</strong> ~4–6 USD/month (~50–75 USD/year).</p>
 <h3 id="7-risk-assessment">7. Risk Assessment</h3>
-<p><em>Risk Matrix</em></p>
+<p><strong>Risk Matrix</strong></p>
 <ul>
-<li>Network outage: Medium impact, Medium probability.</li>
-<li>API request overload: Medium impact, Medium probability.</li>
-<li>Sentiment data bias: High impact, Low probability.</li>
-<li>Budget overrun: Medium impact, Low probability.</li>
+<li>AI misinterpretation — High impact, Low probability.</li>
+<li>API overload — Medium impact, Low probability.</li>
+<li>Budget overrun — Medium impact, Low probability.</li>
+<li>Logic error — Medium impact, Low probability.</li>
 </ul>
-<p><em>Mitigation Strategies</em></p>
+<p><strong>Mitigation Strategies</strong></p>
 <ul>
-<li>Network: Local storage on Raspberry Pi with Docker.</li>
-<li>API overload: Limit access through API Gateway.</li>
-<li>Sentiment bias: Periodically recalibrate the model.</li>
-<li>Cost: AWS budget alerts and service optimization.</li>
+<li>AI deviation: Careful prompt engineering.</li>
+<li>API overload: Request throttling via API Gateway.</li>
+<li>Budget: AWS budget alerts and service optimization.</li>
+<li>Logic: Rigorous Lambda testing and validation.</li>
 </ul>
-<p><em>Contingency Plan</em></p>
+<p><strong>Contingency Plan</strong></p>
 <ul>
-<li>Revert to manual data collection if AWS outage occurs.</li>
-<li>Use CloudFormation to restore cost-related configurations.</li>
+<li>Manual data collection fallback if AWS outage occurs.</li>
+<li>Use CloudFormation to restore infrastructure configurations.</li>
 </ul>
 <h3 id="8-expected-outcomes">8. Expected Outcomes</h3>
-<p><strong>Enhanced user experience</strong>: Restaurant recommendations based on emotions and real descriptions.<br>
-<strong>Practical AI integration</strong>: Applying Bedrock + SageMaker in a complete product system.<br>
-<strong>Reusable data foundation</strong>: For research on emotional AI and customer behavior.<br>
-<strong>Scalability</strong>: Expand to include factors like “location,” “culinary trends,” and “seasonal dishes.”</p>
+<p><strong>Enhanced User Experience:</strong> Provides a smart meal assistant, removing manual effort in tracking and choosing meals.</p>
+<p><strong>Practical AI Integration:</strong> Demonstrates real-world AWS Bedrock integration in production-level systems.</p>
+<p><strong>Nutrition Data Foundation:</strong> Expandable dataset for AI and healthcare research.</p>
+<p><strong>Scalability:</strong> Extendable to image-based food analysis, AI chat coaching, and mobile applications.</p>
 
 
 
@@ -1630,19 +1636,19 @@ or download the <a href="../attachments/budget_estimation.pdf">budget estimation
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1765201366"></script>
-    <script src="../js/perfect-scrollbar.min.js?1765201366"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1765201366"></script>
-    <script src="../js/jquery.sticky.js?1765201366"></script>
-    <script src="../js/featherlight.min.js?1765201366"></script>
-    <script src="../js/highlight.pack.js?1765201366"></script>
+    <script src="../js/clipboard.min.js?1765202472"></script>
+    <script src="../js/perfect-scrollbar.min.js?1765202472"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1765202472"></script>
+    <script src="../js/jquery.sticky.js?1765202472"></script>
+    <script src="../js/featherlight.min.js?1765202472"></script>
+    <script src="../js/highlight.pack.js?1765202472"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1765201366"></script>
-    <script src="../js/learn.js?1765201366"></script>
-    <script src="../js/hugo-learn.js?1765201366"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1765202472"></script>
+    <script src="../js/learn.js?1765202472"></script>
+    <script src="../js/hugo-learn.js?1765202472"></script>
 
-    <link href="../mermaid/mermaid.css?1765201366" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1765201366"></script>
+    <link href="../mermaid/mermaid.css?1765202472" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1765202472"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
