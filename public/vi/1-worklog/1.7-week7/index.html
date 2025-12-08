@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head><script src="/HuynhLeDuc/aws-workshop.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=HuynhLeDuc/aws-workshop.git/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="huynhld.ai@gmail.com" />
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>Worklog Tuần 7 :: Báo cáo thực tập</title>
+
+    
+    <link href="../../../css/nucleus.css?1765196297" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1765196297" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1765196297" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1765196297" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1765196297" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1765196297" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1765196297" rel="stylesheet">
+    <link href="../../../css/theme.css?1765196297" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1765196297" rel="stylesheet">
+    
+    <link href="../../../css/theme-workshop.css?1765196297" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.3.1.min.js?1765196297"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../../vi/1-worklog/1.7-week7/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="../../../">
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 30"
+    width="30%"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+        .cls-2 {
+          fill: #f90;
+          fill-rule: evenodd;
+        }
+      </style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path
+      class="cls-1"
+      d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"
+    ></path>
+  </svg>
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1765196297"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1765196297"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/HuynhLeDuc\/aws-workshop.git\/\/vi";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1765196297"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.12-week12/">
+     <b> 1.12 </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Bản đề xuất"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/2-proposal/">
+     <b> 2. </b> Bản đề xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/3-blogstranslated/"
+  title="Các bài blogs đã dịch"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/">
+     <b> 3. </b> Các bài blogs đã dịch 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.1-blog1/"
+  title="Blog 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.1-blog1/">
+     <b> 3.1. </b> Blog 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.2-blog2/"
+  title="Blog 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.2-blog2/">
+     <b> 3.2. </b> Blog 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.3-blog3/"
+  title="Blog 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.3-blog3/">
+     <b> 3.3. </b> Blog 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/">
+     <b> 4. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.1-workshop-overview/">
+     <b> 5.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+  title="Các bước chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.2-prerequiste/">
+     <b> 5.2. </b> Các bước chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-vpc-to-internet/"
+  title="Khám phá Bedrock Console"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-vpc-to-internet/">
+     <b> 5.3. </b> Khám phá Bedrock Console 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-vpc-to-internet/5.3.1-create-gwe/"
+  title="Khám phá bedrock"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-vpc-to-internet/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Khám phá bedrock 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/"
+  title="Thiết kế Agent"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/">
+     <b> 5.4 </b> Thiết kế Agent 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Tạo Knowledge Base"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Tạo Knowledge Base 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-agent/"
+  title="Tạo Agent"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.2-create-agent/">
+     <b> 5.4.2 </b> Tạo Agent 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/"
+  title="Thử nghiệm ở on premise"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.5-policy/">
+     <b> 5.5 </b> Thử nghiệm ở on premise 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.6-cleanup/">
+     <b> 5.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/6-self-evaluation/">
+     <b> 6. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/7-feedback/">
+     <b> 7. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="http://localhost:1313/HuynhLeDuc/aws-workshop.git/1-worklog/1.7-week7/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="http://localhost:1313/HuynhLeDuc/aws-workshop.git/vi/1-worklog/1.7-week7/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
+</left>
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../vi/'>Báo cáo thực tập</a> > <a href='../../../vi/1-worklog/'>Nhật ký công việc</a> > Worklog Tuần 7
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mục-tiêu-tuần--">Mục tiêu tuần  :</a></li>
+        <li><a href="#các-công-việc-triển-khai-trong-tuần">Các công việc triển khai trong tuần</a></li>
+        <li><a href="#kết-quả-đạt-được-trong-tuần-7">Kết quả đạt được trong tuần 7:</a></li>
+        <li><a href="#tóm-tắt-kiến-thức-đạt-được">Tóm tắt kiến thức đạt được</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Worklog Tuần 7
+            </h1>
+          
+
+        
+
+
+
+	<hr>
+<h3 id="mục-tiêu-tuần--">Mục tiêu tuần  :</h3>
+<p><strong>Phần 1 – AWS CloudWatch</strong></p>
+<ul>
+<li>Hiểu tổng quan kiến trúc Amazon CloudWatch và các thành phần: Metrics, Logs, Alarms, Dashboard, Events.</li>
+<li>Thực hành tạo và giám sát CloudWatch Metrics cho EC2, RDS, Lambda.</li>
+<li>Thu thập và phân tích logs với CloudWatch Logs.</li>
+<li>Tạo CloudWatch Alarm với các ngưỡng tùy chỉnh.</li>
+<li>Xây dựng CloudWatch Dashboard theo dõi hệ thống.</li>
+<li>Thực hành container monitoring với CloudWatch Container Insights.</li>
+<li>Dọn dẹp tài nguyên tránh phát sinh chi phí.</li>
+</ul>
+<p><strong>Phần 2 – Hybrid DNS với Route 53 Resolver</strong></p>
+<ul>
+<li>Hiểu kiến trúc DNS hybrid giữa on-premise và AWS.</li>
+<li>Tạo và cấu hình Route 53 Resolver (inbound, outbound).</li>
+<li>Tạo và áp dụng Resolver Rules để forward DNS query.</li>
+<li>Tích hợp DNS on-premise (Active Directory DNS) với Route 53 private hosted zone.</li>
+<li>Kiểm tra phân giải tên miền 2 chiều (AWS → on-premise, on-premise → AWS).</li>
+<li>Dọn dẹp tài nguyên: AD, endpoint, VPC config.</li>
+</ul>
+<hr>
+<h3 id="các-công-việc-triển-khai-trong-tuần">Các công việc triển khai trong tuần</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Thứ</th>
+          <th>Công việc chi tiết</th>
+          <th>Ngày bắt đầu</th>
+          <th>Ngày hoàn thành</th>
+          <th>Nguồn tài liệu</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2</td>
+          <td><strong>CloudWatch – Tổng quan &amp; Kiến trúc</strong> <br> • Nghiên cứu tổng quan CloudWatch và vai trò trong hệ thống AWS. <br> • Tìm hiểu các thành phần chính: Metrics, Logs, Alarms, Dashboards, Events, Container Insights. <br> • Hiểu sự khác biệt giữa Basic Monitoring và Detailed Monitoring. <br> • Xem kiến trúc CloudWatch end-to-end: ứng dụng → log agent → log group → metric filter → alarm → SNS → hành động tự động. <br> • Tạo biểu đồ đầu tiên từ metrics mặc định của EC2.</td>
+          <td>20/10/2025</td>
+          <td>20/10/2025</td>
+          <td><a href="https://cloudjourney.awsstudygroup.com/">cloudjourney.awsstudygroup.com</a></td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>CloudWatch Metrics &amp; Logs – Triển khai thực tế</strong> <br> • Tạo Log Group thủ công và tìm hiểu cấu trúc Log Stream. <br> • Cài đặt CloudWatch Agent lên EC2 để thu thập CPU, RAM, Disk, Network ở mức OS-level. <br> • Cấu hình file <code>cloudwatch-agent.json</code> để gửi logs hệ thống (syslog, application log). <br> • Tạo Metric Filter để tìm lỗi theo pattern (“ERROR”, “CRITICAL”, “Failed”). <br> • Gửi custom metric bằng lệnh AWS CLI (<code>put-metric-data</code>). <br> • Quan sát retention period và test thay đổi retention.</td>
+          <td>21/10/2025</td>
+          <td>21/10/2025</td>
+          <td><a href="https://cloudjourney.awsstudygroup.com/">cloudjourney.awsstudygroup.com</a></td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>CloudWatch Alarm &amp; Dashboard – Tự động hóa cảnh báo</strong> <br> • Tạo CPU Alarm với ngưỡng 70% trong 5 phút. <br> • Tạo Alarm cho EC2 Status Check Failure. <br> • Kết nối Alarm → SNS Topic → Email để nhận cảnh báo. <br> • Tạo Alarm tự động reboot EC2 khi CPU quá tải (bằng EC2 action). <br> • Tạo Dashboard tùy chỉnh: thêm widget metrics, logs, alarm status, text widget. <br> • Tạo Dashboard giám sát toàn bộ hệ thống: EC2 + RDS + Network. <br> • Thực hiện Container Insights cho ECS: xem CPU, RAM, Task Restart.</td>
+          <td>22/10/2025</td>
+          <td>22/10/2025</td>
+          <td><a href="https://cloudjourney.awsstudygroup.com/">cloudjourney.awsstudygroup.com</a></td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>Route 53 Resolver – Hiểu và xây dựng kiến trúc DNS Hybrid</strong> <br> • Tìm hiểu Route 53 private hosted zone và DNS resolution trong VPC. <br> • Tạo Outbound Resolver Endpoint để AWS gửi truy vấn về on-premise DNS. <br> • Tạo Inbound Resolver Endpoint cho phép hệ thống on-premise truy vấn ngược lên AWS. <br> • Tạo Resolver Rule chuyển tiếp tên miền “corp.local” về DNS on-premise. <br> • Gán rules vào VPC và kiểm tra trạng thái endpoint.</td>
+          <td>23/10/2025</td>
+          <td>23/10/2025</td>
+          <td><a href="https://cloudjourney.awsstudygroup.com/">cloudjourney.awsstudygroup.com</a></td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>Microsoft AD + DNS Integration – Mô phỏng on-premise DNS</strong> <br> • Khởi tạo EC2 Windows Server và cài đặt Microsoft Active Directory. <br> • Tạo domain “corp.local” và cấu hình DNS zone trong AD. <br> • Cấu hình Conditional Forwarder từ AD → Inbound Endpoint AWS. <br> • Tạo bản ghi A, CNAME trong on-premise DNS. <br> • Kiểm tra phân giải 2 chiều: <br>   – Từ AWS: <code>nslookup dc1.corp.local</code> <br>   – Từ AD: <code>nslookup api.internal.aws</code> <br> • Kiểm tra phân giải khi endpoint down (test failover).</td>
+          <td>24/10/2025</td>
+          <td>24/10/2025</td>
+          <td><a href="https://cloudjourney.awsstudygroup.com/">cloudjourney.awsstudygroup.com</a></td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>Dọn dẹp tài nguyên, review và tối ưu chi phí</strong> <br> • Xóa Log Group, Log Stream, Alarm, Dashboard không dùng. <br> • Tắt Container Insights để tránh phí CloudWatch. <br> • Xóa Route 53 Resolver endpoints (vì tính theo giờ). <br> • Xóa Resolver Rule. <br> • Tắt và xóa Microsoft AD domain controller. <br> • Xóa toàn bộ EC2 test. <br> • Kiểm tra Bill → xem phần CloudWatch Logs, metrics, AD, endpoints.</td>
+          <td>25/10/2025</td>
+          <td>25/10/2025</td>
+          <td><a href="https://cloudjourney.awsstudygroup.com/">cloudjourney.awsstudygroup.com</a></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="kết-quả-đạt-được-trong-tuần-7">Kết quả đạt được trong tuần 7:</h3>
+<h4 id="1-aws-cloudwatch">1. AWS CloudWatch</h4>
+<p><strong>CloudWatch Metrics – Thu thập &amp; phân tích</strong></p>
+<ul>
+<li>Liệt kê toàn bộ metrics mặc định từ EC2, EBS, VPC, ELB.</li>
+<li>Tự tạo custom metrics bằng CLI và PutMetricData.</li>
+<li>Kiểm tra retention 15 tháng, xem thử biểu đồ theo 1s granularity.</li>
+<li>Phân tích các tình huống bất thường: CPU Spike, Network I/O tăng đột biến, DiskOps cao.</li>
+</ul>
+<hr>
+<p><strong>CloudWatch Logs – Thu thập log ứng dụng</strong></p>
+<ul>
+<li>Cài đặt CloudWatch Agent để thu thập log OS và ứng dụng.</li>
+<li>Tạo Log Group, Log Stream, đẩy dữ liệu real-time.</li>
+<li>Thiết lập log retention, export logs ra S3 để phân tích.</li>
+<li>Nhận diện các lỗi phổ biến trong log: throttling, unauthorized, lỗi CPUCredit.</li>
+</ul>
+<hr>
+<p><strong>CloudWatch Alarms – Cảnh báo và phản hồi</strong></p>
+<ul>
+<li>Tạo alarm cho CPU &gt; 70% trong 3 phút.</li>
+<li>Tạo alarm cho trạng thái hệ thống EC2 fail.</li>
+<li>Thiết lập SNS notification để gửi email cảnh báo.</li>
+<li>Thiết lập auto-recovery khi EC2 bị lỗi phần cứng.</li>
+</ul>
+<hr>
+<p><strong>CloudWatch Dashboard – Bảng điều khiển giám sát</strong></p>
+<ul>
+<li>Tự xây dựng dashboard theo dạng real-time.</li>
+<li>Gắn metrics của EC2, RDS, NAT Gateway, ELB lên cùng một giao diện.</li>
+<li>Tích hợp widget dạng graph, single value và log pattern.</li>
+</ul>
+<hr>
+<p><strong>Container Insights – Giám sát microservices</strong></p>
+<ul>
+<li>Bật CloudWatch Container Insights cho ECS &amp; Fargate.</li>
+<li>Giám sát CPU/memory per task, per pod, per container.</li>
+<li>Phân tích lỗi container restart count để xác định root cause.</li>
+<li>Đánh giá cách CloudWatch Insight hỗ trợ troubleshooting nhanh.</li>
+</ul>
+<hr>
+<p><strong>Dọn dẹp tài nguyên</strong></p>
+<ul>
+<li>Xóa Dashboard, Alarm, Metrics custom.</li>
+<li>Dừng agent và xoá log group.</li>
+<li>Tắt Container Insights để tránh phát sinh phí.</li>
+</ul>
+<hr>
+<p><strong>Kết quả đạt được</strong></p>
+<ul>
+<li>Nắm vững kiến trúc CloudWatch và pipeline giám sát toàn hệ thống AWS.</li>
+<li>Tự triển khai đầy đủ quy trình monitoring: <strong>metrics → logs → alarm → dashboard</strong>.</li>
+<li>Biết phân tích và xử lý lỗi dựa trên logs và metrics.</li>
+<li>Thành thạo hơn trong việc tối ưu hoá chi phí và hiệu năng nhờ dữ liệu CloudWatch.</li>
+<li>Có khả năng xây dựng hệ thống cảnh báo real-time phục vụ DevOps / SRE.</li>
+</ul>
+<hr>
+<h4 id="2-thiết-lập-hybrid-dns-với-route-53-resolver">2. Thiết lập Hybrid DNS với Route 53 Resolver</h4>
+<p><strong>Tìm hiểu kiến trúc Hybrid DN</strong></p>
+<ul>
+<li>Phân tích vấn đề thường gặp khi doanh nghiệp có DNS on-prem.</li>
+<li>Hiểu vai trò của:
+<ul>
+<li><strong>Inbound Endpoint</strong> (on-prem → AWS)</li>
+<li><strong>Outbound Endpoint</strong> (AWS → on-prem)</li>
+<li><strong>Resolver Rules</strong> để forward tên miền nội bộ.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Chuẩn bị môi trường</strong></p>
+<ul>
+<li>Tạo 1 VPC riêng với 2 private subnet để đặt endpoint.</li>
+<li>Tạo Security Group cho DNS với port 53 UDP/TCP.</li>
+<li>Deploy 1 EC2 Windows Server để chạy Microsoft Active Directory Domain Services.</li>
+</ul>
+<hr>
+<p><strong>Kết nối đến RDGW (Remote Desktop Gateway)</strong></p>
+<ul>
+<li>Kết nối qua RDGW để truy cập server trong private subnet.</li>
+<li>Kiểm tra khả năng phân giải DNS trong VPC trước khi cấu hình hybrid.</li>
+</ul>
+<hr>
+<p><strong>Triển khai Microsoft Active Directory</strong></p>
+<ul>
+<li>Cấu hình Domain Controller on-prem (giả lập).</li>
+<li>Thiết lập DNS internal zone: ví dụ <code>company.local</code>.</li>
+<li>Kiểm tra bản ghi SRV, A, NS hoạt động đúng.</li>
+</ul>
+<hr>
+<p><strong>Thiết lập hệ thống DNS Hybrid</strong></p>
+<p><strong>1) Outbound Endpoint</strong></p>
+<ul>
+<li>Tạo Outbound Endpoint để EC2 trong VPC có thể gửi DNS query về AD on-prem.</li>
+<li>Gán các resolver rule forward domain <code>company.local</code> về IP DNS on-prem.</li>
+</ul>
+<p><strong>2) Inbound Endpoint</strong></p>
+<ul>
+<li>Tạo Inbound Endpoint để DNS on-prem có thể truy cập Private Hosted Zone của AWS.</li>
+<li>Kiểm tra khả năng phân giải record trong Route 53 Private Zone.</li>
+</ul>
+<p><strong>3) Resolver Rules</strong></p>
+<ul>
+<li>Tạo rule kiểu Forwarding cho domain nội bộ.</li>
+<li>Tạo rule kiểu System để tự động nhận DNS mặc định của VPC.</li>
+</ul>
+<hr>
+<p><strong>Kiểm thử toàn bộ luồng DNS</strong></p>
+<ul>
+<li>Từ server on-prem: ping DNS record của Private Hosted Zone → thành công.</li>
+<li>Từ EC2 trên AWS: phân giải tên miền on-prem → thành công.</li>
+<li>Kiểm tra độ trễ DNS và xác thực 2-way resolution.</li>
+</ul>
+<hr>
+<p><strong>Dọn dẹp tài nguyên</strong></p>
+<ul>
+<li>Xóa endpoint để tránh phát sinh chi phí theo giờ.</li>
+<li>Xóa Private Hosted Zone và các test records.</li>
+<li>Gỡ AD và tắt EC2 test.</li>
+</ul>
+<hr>
+<p><strong>Kết quả đạt được</strong></p>
+<ul>
+<li>Hiểu rõ cơ chế vận hành DNS hybrid trong doanh nghiệp.</li>
+<li>Tự triển khai hệ thống Route 53 Resolver hoàn chỉnh (inbound, outbound, rules).</li>
+<li>Tích hợp thành công DNS Microsoft AD với DNS của AWS.</li>
+<li>Kiểm tra thành công luồng phân giải DNS hai chiều.</li>
+<li>Nắm chắc mô hình DNS hiện đại cho môi trường multi-cloud và hybrid-cloud.</li>
+</ul>
+<hr>
+<h3 id="tóm-tắt-kiến-thức-đạt-được">Tóm tắt kiến thức đạt được</h3>
+<p><strong>CloudWatch:</strong></p>
+<ul>
+<li>Thu thập metrics, logs end-to-end.</li>
+<li>Tạo alarms thông minh và tự động hóa xử lý.</li>
+<li>Xây dashboard trực quan.</li>
+<li>Giám sát container bằng Container Insights.</li>
+</ul>
+<p><strong>Route 53 Hybrid DNS:</strong></p>
+<ul>
+<li>Hiểu mô hình DNS hybrid thực tế.</li>
+<li>Tích hợp on-premise DNS với Route 53 Resolver.</li>
+<li>Kiểm tra phân giải 2 chiều giữa hệ thống.</li>
+<li>Áp dụng vào triển khai hệ thống doanh nghiệp.</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../../vi/1-worklog/1.6-week6/" title="Worklog Tuần 6"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../../vi/1-worklog/1.8-week8/" title="Worklog Tuần 8" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1765196297"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1765196297"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1765196297"></script>
+    <script src="../../../js/jquery.sticky.js?1765196297"></script>
+    <script src="../../../js/featherlight.min.js?1765196297"></script>
+    <script src="../../../js/highlight.pack.js?1765196297"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1765196297"></script>
+    <script src="../../../js/learn.js?1765196297"></script>
+    <script src="../../../js/hugo-learn.js?1765196297"></script>
+
+    <link href="../../../mermaid/mermaid.css?1765196297" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1765196297"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>

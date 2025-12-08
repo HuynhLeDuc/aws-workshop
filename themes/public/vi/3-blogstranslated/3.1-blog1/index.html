@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="baonq.ai2004@gmail.com" />
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>Blog 1 :: Báo cáo thực tập</title>
+
+    
+    <link href="../../../css/nucleus.css?1765190381" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1765190381" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1765190381" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1765190381" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1765190381" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1765190381" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1765190381" rel="stylesheet">
+    <link href="../../../css/theme.css?1765190381" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1765190381" rel="stylesheet">
+    
+    <link href="../../../css/theme-workshop.css?1765190381" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.3.1.min.js?1765190381"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../../vi/3-blogstranslated/3.1-blog1/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="../../../">
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 30"
+    width="30%"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+        .cls-2 {
+          fill: #f90;
+          fill-rule: evenodd;
+        }
+      </style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path
+      class="cls-1"
+      d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"
+    ></path>
+  </svg>
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1765190381"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1765190381"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/github.com\/HuynhLeDuc\/fcj-workshop-template.git\/\/vi";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1765190381"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.12-week12/">
+     <b> 1.12 </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Bản đề xuất"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/2-proposal/">
+     <b> 2. </b> Bản đề xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/3-blogstranslated/"
+  title="Các bài blogs đã dịch"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/">
+     <b> 3. </b> Các bài blogs đã dịch 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.1-blog1/"
+  title="Blog 1"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.1-blog1/">
+     <b> 3.1. </b> Blog 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.2-blog2/"
+  title="Blog 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.2-blog2/">
+     <b> 3.2. </b> Blog 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.3-blog3/"
+  title="Blog 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.3-blog3/">
+     <b> 3.3. </b> Blog 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/">
+     <b> 4. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.1-workshop-overview/">
+     <b> 5.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+  title="Các bước chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.2-prerequiste/">
+     <b> 5.2. </b> Các bước chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-vpc-to-internet/"
+  title="Khám phá Bedrock Console"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-vpc-to-internet/">
+     <b> 5.3. </b> Khám phá Bedrock Console 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-vpc-to-internet/5.3.1-create-gwe/"
+  title="Khám phá bedrock"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-vpc-to-internet/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Khám phá bedrock 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/"
+  title="Thiết kế Agent"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/">
+     <b> 5.4 </b> Thiết kế Agent 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Tạo Knowledge Base"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Tạo Knowledge Base 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-agent/"
+  title="Tạo Agent"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.2-create-agent/">
+     <b> 5.4.2 </b> Tạo Agent 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/"
+  title="Thử nghiệm ở on premise"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.5-policy/">
+     <b> 5.5 </b> Thử nghiệm ở on premise 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.6-cleanup/">
+     <b> 5.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/6-self-evaluation/">
+     <b> 6. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/7-feedback/">
+     <b> 7. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="https://github.com/HuynhLeDuc/fcj-workshop-template.git/3-blogstranslated/3.1-blog1/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="https://github.com/HuynhLeDuc/fcj-workshop-template.git/vi/3-blogstranslated/3.1-blog1/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
+</left>
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../vi/'>Báo cáo thực tập</a> > <a href='../../../vi/3-blogstranslated/'>Các bài blogs đã dịch</a> > Blog 1
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#tổng-quan-về-giải-pháp">Tổng quan về giải pháp</a></li>
+    <li><a href="#thiết-lập-môi-trường-phát-triển">Thiết lập môi trường phát triển</a>
+      <ul>
+        <li><a href="#cấu-hình-visual-studio-code-với-nhiều-jdks">Cấu hình Visual Studio Code với nhiều JDKs</a></li>
+        <li><a href="#tích-hợp-visual-studio-code-với-amazon-q-developer-transform">Tích hợp Visual Studio Code với Amazon Q Developer: Transform</a></li>
+      </ul>
+    </li>
+    <li><a href="#chuyển-đổi-ứng-dụng-java">Chuyển đổi ứng dụng Java</a>
+      <ul>
+        <li><a href="#chuyển-đổi-java-8-sang-java-21">Chuyển đổi Java 8 sang Java 21</a></li>
+        <li><a href="#xem-lại-kế-hoạch-transformation">Xem lại kế hoạch Transformation</a></li>
+        <li><a href="#xem-lại-transformation-summary">Xem lại Transformation Summary</a></li>
+        <li><a href="#chuyển-đổi-java-11-sang-java-21">Chuyển đổi Java 11 sang Java 21</a></li>
+        <li><a href="#kiểm-thử-đơn-vị">Kiểm thử đơn vị</a></li>
+      </ul>
+    </li>
+    <li><a href="#lợi-ích-và-tác-động">Lợi ích và tác động</a></li>
+    <li><a href="#phần-kết-luận">Phần kết luận</a></li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Blog 1
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="hiện-đại-hóa-ứng-dụng-java-với-amazon-q-developer-và-visual-studio-code">Hiện đại hóa ứng dụng Java với Amazon Q Developer và Visual Studio Code</h1>
+<span style="font-size:13px; color: #737070ff;">
+Tác giả: Vimal Vyas và Shweta Singh – 01/04/2025
+</span>
+<small>
+<a href="https://aws.amazon.com/blogs/migration-and-modernization/category/amazon-q/" style="color:#0073bb; text-decoration:none;">Amazon Q</a>, 
+<a href="https://aws.amazon.com/blogs/migration-and-modernization/category/amazon-q/" style="color:#0073bb; text-decoration:none;">Amazon Q Developer</a>, 
+<a href="https://aws.amazon.com/blogs/migration-and-modernization/category/devops/aws-java-development/" style="color:#0073bb; text-decoration:none;">AWS Java Development</a>, 
+<a href="https://aws.amazon.com/blogs/migration-and-modernization/category/devops/" style="color:#0073bb; text-decoration:none;">DevOps</a>, 
+<a href="https://aws.amazon.com/blogs/migration-and-modernization/category/post-types/technical-how-to/" style="color:#0073bb; text-decoration:none;">Technical How-to</a> 
+| <a href="https://aws.amazon.com/blogs/migration-and-modernization/modernizing-java-applications-with-amazon-q-developer-and-visual-studio-code/" style="color:#0073bb; text-decoration:none;">Permalink</a>
+</small>
+<p>Theo thời gian, các tổ chức tiếp tục sử dụng các ứng dụng Java được xây dựng từ nhiều năm trước bằng các phiên bản Java Development Kit (JDK) cũ hơn. Điều này dẫn đến việc các ứng dụng chạy mã lỗi thời với các phụ thuộc lỗi thời. Sự kết hợp của các yếu tố này có thể dẫn đến lỗ hổng bảo mật, hiệu suất ứng dụng kém và các thách thức về bảo trì. Những thách thức này ngày càng khó quản lý trong các tổ chức chạy số lượng lớn ứng dụng Java. Các nhà phát triển đang tìm kiếm một môi trường phát triển hỗ trợ chạy các ứng dụng Java cũ với các JDK khác nhau; và các công cụ giúp tự động di chuyển ứng dụng sang phiên bản Java hiện tại, thay thế mã lỗi thời và sửa các phụ thuộc bị thiếu.</p>
+<p>Vào tháng 4 năm 2024, Amazon Web Services (AWS) đã công bố Amazon Q Developer: Transform for Java chính thức ra mắt  . Vào ngày 14 tháng 2 năm 2025, Amazon Q Developer đã công bố hỗ trợ nâng cấp lên Java 21. Với bản phát hành này, Amazon Q Developer: Transform bổ sung tính năng chuyển đổi chỉ bằng một cú nhấp chuột các ứng dụng Java 8 và Java 11 cũ sang Java 21.</p>
+<h2 id="tổng-quan-về-giải-pháp">Tổng quan về giải pháp</h2>
+<p>Giải pháp bao gồm các bước sau để thiết lập môi trường phát triển của bạn:
+1.Cấu hình Visual Studio Code với nhiều JDK và Maven
+2.Tích hợp Visual Studio Code với Amazon Q Developer: Transform
+Sau khi môi trường phát triển được thiết lập, bạn có thể sử dụng tính năng Amazon Q Developer: Transform để chuyển đổi  ứng dụng Java 8 hoặc Java 11 sang Java 21.</p>
+<h2 id="thiết-lập-môi-trường-phát-triển">Thiết lập môi trường phát triển</h2>
+<h3 id="cấu-hình-visual-studio-code-với-nhiều-jdks">Cấu hình Visual Studio Code với nhiều JDKs</h3>
+<p>Trong VSCode, chọn View/Command Palette, sau đó chọn Java: Configure Java runtime và tải về các phiên bản JDK 8, 11, và 21.
+Tùy chọn: sử dụng Amazon Corretto để tải nhiều phiên bản JDK. Amazon Corretto là một bản phân phối OpenJDK miễn phí, đa nền tảng và sẵn sàng cho môi trường production.</p>
+<p><img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi.gif" alt="Translate blog 1"></p>
+<p>Để cài đặt plugin Maven, mở VSCode Extensions, tìm hoặc chọn Maven for Java và bấm Install.
+<img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi1.gif" alt="Translate blog 1"></p>
+<p>Bây giờ, hãy thêm các ứng dụng Java được xây dựng trên Java 8 và Java 11 vào không gian làm việc VSCode. Chúng tôi đang sử dụng các ứng dụng demo Java mẫu được phát triển với các phiên bản Java 8 và Java 11 cho hướng dẫn này. Hãy đảm bảo rằng tệp pom.xml trỏ đến phiên bản Java tương ứng như trong hình ảnh sau.</p>
+<p><img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi3.gif" alt="Translate blog 1"></p>
+<h3 id="tích-hợp-visual-studio-code-với-amazon-q-developer-transform">Tích hợp Visual Studio Code với Amazon Q Developer: Transform</h3>
+<p>Amazon Q Developer cung cấp khả năng tích hợp với nhiều môi trường phát triển tích hợp (IDE) và VSCode là một trong số đó. Hãy làm theo tài liệu hướng dẫn của AWS để tích hợp VSCode với Amazon Q Developer .</p>
+<h2 id="chuyển-đổi-ứng-dụng-java">Chuyển đổi ứng dụng Java</h2>
+<h3 id="chuyển-đổi-java-8-sang-java-21">Chuyển đổi Java 8 sang Java 21</h3>
+<p>Các bước sau đây sẽ hướng dẫn bạn thực hiện chuyển đổi mã:</p>
+<ol>
+<li>Chọn Amazon Q  trên thanh điều hướng ở bảng điều khiển phía dưới của VSCode.</li>
+<li>Sau đó, chọn &ldquo;Open Chat panel&rdquo; từ bảng lệnh. Trong bảng điều khiển trò chuyện, nhập /transform rồi chọn dự án Java 8 cần chuyển đổi.</li>
+<li>Bây giờ chọn phiên bản mã nguồn là 8 và phiên bản mã đích là 21. Chọn Xác nhận.</li>
+<li>Một cửa sổ bật lên sẽ mở ra với tiêu đề &quot; Choose to skip unit tests&quot; , chọn &ldquo;Skip unit tests&rdquo; và chọn &ldquo;Confirm&rdquo; . Chúng tôi sẽ bỏ qua unit test vì có một giới hạn kỹ thuật yêu cầu dự án phải có khả năng xây dựng và hoàn thành các bài kiểm tra trong vòng 55 phút.</li>
+<li>Một cửa sổ bật lên mới sẽ mở ra và cung cấp các tùy chọn để chọn cách nhận các thay đổi được đề xuất. Cửa sổ này cung cấp các tùy chọn Một Khác Biệt (One Diff) và Nhiều Khác Biệt (Multiple Diff).  Chọn  Một Khác Biệt (One Diff) cho các chuyển đổi quy mô nhỏ hơn với các thay đổi mã có thể quản lý được.</li>
+<li>Một cửa sổ bật lên cuối cùng sẽ mở ra để cung cấp lệnh tìm đường dẫn JDK. Chạy lệnh trong một terminal mới và sau đó nhập đường dẫn đến JDK 8. Sau khi nhập đường dẫn JDK, Amazon Q sẽ bắt đầu xây dựng dự án của bạn. Quá trình này có thể mất đến 10 phút tùy thuộc vào quy mô dự án của bạn.</li>
+</ol>
+<p><img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi4.gif" alt="Translate blog 1"></p>
+<h3 id="xem-lại-kế-hoạch-transformation">Xem lại kế hoạch Transformation</h3>
+<p>Sau khi Amazon Q Developer tải lên và biên dịch mã của bạn trong môi trường biên dịch an toàn, nó sẽ tạo ra một kế hoạch chuyển đổi. Kế hoạch chuyển đổi này hiển thị chi tiết mã Java, bao gồm các dòng mã, các phụ thuộc cần thay thế, các phiên bản mã Java 8 đã lỗi thời và số lượng tệp cần thay đổi.</p>
+<p><img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi5.gif" alt="Translate blog 1"></p>
+<h3 id="xem-lại-transformation-summary">Xem lại Transformation Summary</h3>
+<p>Sau khi hoàn tất quá trình chuyển đổi, Amazon Q Developer sẽ tạo một bản tóm tắt chuyển đổi chi tiết, liệt kê các phụ thuộc, các phiên bản mã Java 8 đã lỗi thời và danh sách tất cả các tệp đã thay đổi. Các phiên bản mã lỗi thời sau đây đã được Amazon Q Developer thay thế.</p>
+<p><img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi2.jpg" alt="Translate blog 1"></p>
+<p>Amazon Q Developer tóm tắt các thay đổi được đề xuất trong tab &ldquo;Thay đổi được đề xuất&rdquo;, mở ra sau khi quá trình chuyển đổi hoàn tất. Để chấp nhận các thay đổi do Amazon Q thực hiện, hãy vào tab &ldquo;Thay đổi được đề xuất&rdquo; và chọn &ldquo;Chấp nhận&rdquo;
+<img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi6.gif" alt="Translate blog 1"></p>
+<h3 id="chuyển-đổi-java-11-sang-java-21">Chuyển đổi Java 11 sang Java 21</h3>
+<p>Quy trình tương tự như trên, chỉ khác ở bước chọn Java 11 làm source version. Bao gồm:
+· Lựa chọn dự án và thông số kỹ thuật phiên bản
+· Xây dựng thiết lập môi trường
+· Xem xét kế hoạch chuyển đổi
+· Chấp nhận những thay đổi cuối cùng</p>
+<h3 id="kiểm-thử-đơn-vị">Kiểm thử đơn vị</h3>
+<p>Các doanh nghiệp cũng phải đối mặt với những thách thức như tỷ lệ lỗi cao, vấn đề chất lượng và chu kỳ phát triển dài cho các tính năng và ứng dụng mới. Amazon Q Developer giúp các nhóm phát triển cải thiện năng suất bằng cách tự động hóa các tác vụ thông thường và giảm thiểu nợ kỹ thuật tích lũy thông qua tính năng /test.</p>
+<p>Tính năng /test trong Amazon Q Developer là một chức năng tạo bài kiểm tra đơn vị tự động, giúp các nhà phát triển tạo ra các bộ kiểm tra toàn diện. Sau đây là một ví dụ về cách tạo một bài kiểm tra đơn vị:</p>
+<p><img src="../../../images/3-BlogsTranslated/3.1-Blog1/hi7.gif" alt="Translate blog 1"></p>
+<p>Để chạy thử nghiệm, hãy điều hướng đến tab Kiểm tra và chọn lớp kiểm tra Java đã tạo. Từ tab kiểm tra này, bạn có toàn quyền kiểm soát để chạy bất kỳ thử nghiệm nào, dù là một trường hợp kiểm tra đơn lẻ hay nhiều trường hợp kiểm tra.</p>
+<h2 id="lợi-ích-và-tác-động">Lợi ích và tác động</h2>
+<p>Amazon Q Developer đóng vai trò là trợ lý AI mạnh mẽ giúp chuyển đổi và hiện đại hóa quá trình phát triển phần mềm trong toàn bộ vòng đời, mang lại những lợi ích sau –
+· Đẩy nhanh quá trình hiện đại hóa mã
+· Đơn giản hóa việc quản lý sự phụ thuộc
+· Giảm nợ kỹ thuật
+· Nâng cao hiệu suất ứng dụng
+· Đơn giản hóa việc bảo trì</p>
+<h2 id="phần-kết-luận">Phần kết luận</h2>
+<p>Amazon Q Developer Agent for Code Transformation (QCT) for Java giúp hiện đại hóa các ứng dụng Java cũ nhanh hơn và hiệu quả hơn. Công cụ này chuyển đổi các hệ thống lỗi thời sang các framework hiện tại và triển khai chúng dưới dạng ứng dụng đám mây gốc trên AWS. Quy trình này giảm thiểu công sức, rủi ro và nhu cầu bảo trì liên tục. Bằng cách sử dụng Amazon Q Developer, bạn sẽ tiết kiệm thời gian và nguồn lực trước đây dành cho việc quản lý nợ kỹ thuật, cho phép nhóm của bạn tập trung vào đổi mới và cải tiến các ứng dụng mới được hiện đại hóa.</p>
+<p>Như đã trình bày trong bài viết này, các nhà phát triển có thể chuyển đổi nhiều ứng dụng Java được xây dựng trên các phiên bản JDK khác nhau bằng Amazon Q Developer và VSCode. Các nhà phát triển cũng có thể tận dụng tính năng /test của Amazon Q Developer để nhanh chóng tạo các trường hợp kiểm thử đơn vị. Công cụ này giúp giảm thiểu độ phức tạp và thời gian cần thiết để hiện đại hóa các ứng dụng Java cũ, cho phép các nhà phát triển tập trung vào đổi mới thay vì bảo trì.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../../vi/3-blogstranslated/" title="Các bài blogs đã dịch"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../../vi/3-blogstranslated/3.2-blog2/" title="Blog 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1765190381"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1765190381"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1765190381"></script>
+    <script src="../../../js/jquery.sticky.js?1765190381"></script>
+    <script src="../../../js/featherlight.min.js?1765190381"></script>
+    <script src="../../../js/highlight.pack.js?1765190381"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1765190381"></script>
+    <script src="../../../js/learn.js?1765190381"></script>
+    <script src="../../../js/hugo-learn.js?1765190381"></script>
+
+    <link href="../../../mermaid/mermaid.css?1765190381" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1765190381"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head><script src="/HuynhLeDuc/aws-workshop.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=HuynhLeDuc/aws-workshop.git/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="huynhld.ai@gmail.com" />
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>Blog 2 :: Báo cáo thực tập</title>
+
+    
+    <link href="../../../css/nucleus.css?1765196297" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1765196297" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1765196297" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1765196297" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1765196297" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1765196297" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1765196297" rel="stylesheet">
+    <link href="../../../css/theme.css?1765196297" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1765196297" rel="stylesheet">
+    
+    <link href="../../../css/theme-workshop.css?1765196297" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.3.1.min.js?1765196297"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../../vi/3-blogstranslated/3.2-blog2/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="../../../">
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 30"
+    width="30%"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+        .cls-2 {
+          fill: #f90;
+          fill-rule: evenodd;
+        }
+      </style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path
+      class="cls-1"
+      d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"
+    ></path>
+  </svg>
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1765196297"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1765196297"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/HuynhLeDuc\/aws-workshop.git\/\/vi";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1765196297"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.12-week12/">
+     <b> 1.12 </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Bản đề xuất"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/2-proposal/">
+     <b> 2. </b> Bản đề xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/3-blogstranslated/"
+  title="Các bài blogs đã dịch"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/">
+     <b> 3. </b> Các bài blogs đã dịch 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.1-blog1/"
+  title="Blog 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.1-blog1/">
+     <b> 3.1. </b> Blog 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.2-blog2/"
+  title="Blog 2"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.2-blog2/">
+     <b> 3.2. </b> Blog 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.3-blog3/"
+  title="Blog 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.3-blog3/">
+     <b> 3.3. </b> Blog 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/">
+     <b> 4. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.1-workshop-overview/">
+     <b> 5.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+  title="Các bước chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.2-prerequiste/">
+     <b> 5.2. </b> Các bước chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-vpc-to-internet/"
+  title="Khám phá Bedrock Console"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-vpc-to-internet/">
+     <b> 5.3. </b> Khám phá Bedrock Console 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-vpc-to-internet/5.3.1-create-gwe/"
+  title="Khám phá bedrock"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-vpc-to-internet/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Khám phá bedrock 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/"
+  title="Thiết kế Agent"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/">
+     <b> 5.4 </b> Thiết kế Agent 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Tạo Knowledge Base"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Tạo Knowledge Base 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-agent/"
+  title="Tạo Agent"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.2-create-agent/">
+     <b> 5.4.2 </b> Tạo Agent 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/"
+  title="Thử nghiệm ở on premise"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.5-policy/">
+     <b> 5.5 </b> Thử nghiệm ở on premise 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.6-cleanup/">
+     <b> 5.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/6-self-evaluation/">
+     <b> 6. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/7-feedback/">
+     <b> 7. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="http://localhost:1313/HuynhLeDuc/aws-workshop.git/3-blogstranslated/3.2-blog2/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="http://localhost:1313/HuynhLeDuc/aws-workshop.git/vi/3-blogstranslated/3.2-blog2/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
+</left>
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../vi/'>Báo cáo thực tập</a> > <a href='../../../vi/3-blogstranslated/'>Các bài blogs đã dịch</a> > Blog 2
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#các-tính-năng-của-mạng-lưới-tăng-tốc-ec2">Các tính năng của mạng lưới tăng tốc EC2</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#giải-pháp">Giải pháp</a></li>
+    <li><a href="#những-lợi-ích">Những lợi ích</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#phần-kết-luận">Phần kết luận</a></li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Blog 2
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="modernizing-trading-workloads-with-next-generation-aws-outposts-racks">Modernizing trading workloads with next-generation AWS Outposts racks</h1>
+<span style="font-size:13px; color: #737070ff;">
+Tác giả: Jim Cotis – 01/05/2025
+</span>
+<small
+<p><a href="https://aws.amazon.com/blogs/industries/category/compute/amazon-ec2/" style="color:#0073bb; text-decoration:none;">Amazon EC2</a>,
+<a href="https://aws.amazon.com/blogs/industries/category/compute/amazon-kubernetes-service/" style="color:#0073bb; text-decoration:none;">Amazon Elastic Kubernetes Service</a>,
+<a href="https://aws.amazon.com/blogs/industries/category/compute/amazon-vpc/" style="color:#0073bb; text-decoration:none;">Amazon VPC</a>,
+<a href="https://aws.amazon.com/blogs/industries/category/compute/aws-outposts/" style="color:#0073bb; text-decoration:none;">AWS Outposts</a>,
+<a href="https://aws.amazon.com/blogs/industries/category/industries/financial-services/" style="color:#0073bb; text-decoration:none;">Financial Services</a>
+<a href="https://aws.amazon.com/blogs/industries/category/industries/" style="color:#0073bb; text-decoration:none;">Industries Permalink  Comments </a>
+</small></p>
+<h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới công nghệ tài chính phát triển chóng mặt ngày nay, chỉ cần một mili giây cũng có thể tạo nên sự khác biệt giữa thành công và thất bại trong các giao dịch tài chính. Nhu cầu giao dịch tần suất cao, xử lý dữ liệu thị trường theo thời gian thực và các giao dịch tài chính phức tạp đòi hỏi một cơ sở hạ tầng mang lại hiệu suất, độ tin cậy và tính công bằng vượt trội. AWS đang đáp ứng những nhu cầu này thông qua một danh mục mới: Amazon Elastic Compute Cloud (Amazon EC2)  các trường hợp có tính năng kết nối mạng tăng tốc trên thế hệ thứ hai AWS Outposts Các giá đỡ này bao gồm các phiên bản Bmn-sf2e cho độ trễ cực thấp và hiệu suất xác định, và các phiên bản Bmn-cx2 cho thông lượng cao và độ trễ thấp.</p>
+<p>Các máy chủ Outposts với khả năng kết nối mạng tăng tốc EC2 bao gồm các máy chủ bare-metal, kết nối mạng tăng tốc, khả năng đa hướng L2/L3 gốc, hỗ trợ Giao thức Thời gian Chính xác (PTP) và cáp có chiều dài bằng nhau, tất cả được thiết kế để giải quyết những thách thức đặc thù mà các bên tham gia thị trường, sàn giao dịch và địa điểm giao dịch phải đối mặt. Các giải pháp của chúng tôi không chỉ đáp ứng các yêu cầu hiệu suất nghiêm ngặt của thị trường tài chính hiện đại mà còn tuân thủ các tiêu chuẩn quy định toàn cầu, tạo điều kiện tiếp cận công bằng cho mọi bên tham gia.
+Trọng tâm trong dịch vụ của chúng tôi là khái niệm ổn định tĩnh, một nguyên tắc cho phép vận hành liên tục ngay cả khi xảy ra sự cố hỏng hóc linh kiện hoặc gián đoạn cục bộ. Phương pháp này, kết hợp với công nghệ tiên tiến của chúng tôi, tạo nên nền tảng vững chắc cho các ứng dụng tài chính khắt khe nhất.</p>
+<blockquote>
+<p>Nasdaq đã chuyển đổi thành công hệ thống giao dịch cốt lõi của ba thị trường Bắc Mỹ sang cơ sở hạ tầng thị trường đám mây sử dụng AWS Outposts với mạng lưới tăng tốc các phiên bản Amazon EC2, với quy mô thị trường lớn nhất xử lý lên đến 36 tỷ tin nhắn mỗi ngày. Cơ sở hạ tầng thị trường đám mây này mang lại độ trễ thấp (dưới 2 micro giây) cho các quy trình từ đầu đến cuối và từ lệnh đến giao dịch, cùng với cải thiện hiệu suất lên đến 10% về độ trễ khứ hồi. Dựa trên thành công của việc hiện đại hóa thị trường Nasdaq, Nasdaq và AWS rất vui mừng được giới thiệu sự đổi mới này đến thị trường vốn toàn cầu như một phần của chương trình hợp tác mới được công bố gần đây.  modernization blueprint.. – Nasdaq</p></blockquote>
+<p>Hãy cùng khám phá các thành phần này để hiểu cách chúng kết hợp với nhau để tạo nên cơ sở hạ tầng hiệu suất cao, tuân thủ và linh hoạt cho khối lượng công việc giao dịch, sau giao dịch và phân phối và tiêu thụ dữ liệu thị trường theo thời gian thực.</p>
+<h2 id="các-tính-năng-của-mạng-lưới-tăng-tốc-ec2">Các tính năng của mạng lưới tăng tốc EC2</h2>
+<h4 id="bare-metal-compute">Bare metal compute</h4>
+<p>Giao dịch tài chính yêu cầu độ trễ và độ trễ tối thiểu. Các phiên bản EC2 mạng được tăng tốc này có sẵn dưới dạng phiên bản máy tính bare metal, đáp ứng trực tiếp các yêu cầu về hiệu suất. Các phiên bản này hoạt động mà không cần ảo hóa, giúp các nhà phát triển kiểm soát mức độ tương thích CPU cho ứng dụng của họ. Việc kiểm soát này cho phép tối ưu hóa Truy cập Bộ nhớ Không Đồng nhất (NUMA), giúp giảm thời gian truy cập bộ nhớ và nâng cao hiệu suất tổng thể.</p>
+<h4 id="accelerated-networking">Accelerated networking</h4>
+<p>Thị trường tài chính phụ thuộc vào các mạng hiệu suất cao cho phép chuyển đổi tài sản thành tiền mặt. Các mạng riêng này phải đảm bảo quyền truy cập bình đẳng và công bằng cho tất cả người tham gia, đồng thời duy trì độ trễ tối thiểu. Kiến trúc mạng bare metal mới của chúng tôi đáp ứng các yêu cầu này bằng các card giao diện mạng (NIC) chuyên dụng được kết nối trực tiếp với các thiết bị chuyển mạch trên cùng của rack. Chúng là một mạng vật lý thứ cấp độc lập với Amazon Virtual Private Cloud (VPC) tại mỗi Trạm Tiền đồn. Thiết kế này cho phép tham gia trực tiếp vào các mạng lưới tài chính tư nhân, mang lại hiệu suất mà các thị trường này yêu cầu.demand.</p>
+<h4 id="native-l2l3-multicast">Native L2/L3 multicast</h4>
+<p>Các sàn giao dịch và địa điểm giao dịch sử dụng IP multicast để phát dữ liệu thị trường theo thời gian thực (báo giá, giao dịch, cập nhật sổ lệnh) đến hàng nghìn người đăng ký cùng lúc. Bằng cách tận dụng nền tảng mạng cơ bản, các địa điểm này có thể loại bỏ chi phí thiết lập kết nối riêng lẻ với từng người tham gia thị trường, đồng thời tuân thủ các yêu cầu tiếp cận thị trường công bằng và bình đẳng. Mạng bare metal của chúng tôi bao gồm một nền tảng chuyển mạch chuyên dụng với khả năng multicast lớp 2 và lớp 3 (L2/L3). Mạng lưới duy trì tình trạng đăng ký vượt mức bằng không trên tất cả các đường truyền vật lý, đảm bảo hiệu suất nhất quán cho mọi người tham gia.</p>
+<h4 id="precision-time-protocol-ptp">Precision Time Protocol (PTP)</h4>
+<p>Giao thức Thời gian Chính xác (PTP) đồng bộ hóa hệ thống giao dịch với độ chính xác đến từng nano giây, cho phép sắp xếp thứ tự lệnh chính xác trong hệ thống giao dịch. Mức độ đồng bộ hóa này rất quan trọng để duy trì thứ tự ưu tiên lệnh chính xác trong các thị trường biến động nhanh và ngăn ngừa tranh chấp về việc lệnh nào đến trước.</p>
+<h4 id="equal-length-cabling">Equal length cabling</h4>
+<p>Thị trường tài chính toàn cầu được quản lý bởi các quy định đòi hỏi quyền tiếp cận công bằng cho tất cả người tham gia. Tại Hoa Kỳ, Quy định NMS (Hệ thống Thị trường Quốc gia) yêu cầu các sàn giao dịch phải cung cấp quyền tiếp cận không phân biệt đối xử. Tương tự, tại châu Âu, Chỉ thị II về Thị trường Công cụ Tài chính (MiFID II) cũng thực thi quyền tiếp cận công bằng và bình đẳng đến các địa điểm giao dịch. Các quy định này phản ánh xu hướng toàn cầu giữa các khu vực pháp lý lớn nhằm duy trì sự công bằng điều kiện thị trường. Để tuân thủ các yêu cầu về tính công bằng này, giải pháp của chúng tôi sử dụng các phiên bản Amazon EC2 được kết nối với mạng lưới tài chính thông qua hệ thống cáp có chiều dài bằng nhau. Phương pháp này đảm bảo tất cả người tham gia đều có quyền truy cập thống nhất vào các công cụ khớp lệnh được lưu trữ trên EC2, qua đó hỗ trợ tuân thủ quy định và tính toàn vẹn của thị trường.</p>
+<p>Sau đây là hình ảnh AWS Outpost Rack với kết nối mạng được tăng tốc. Các cáp quang màu xanh lam đều có chiều dài bằng nhau, kết nối chúng với các switch Top of Rack (TOR) ở phía trên.</p>
+<p><img src="../../../images/3-BlogsTranslated/3.2-Blog2/k1.png" alt="Translate blog 2"></p>
+<blockquote>
+<p><em>Hình 1: Ảnh chụp giá đỡ AWS Outposts với mạng lưới được tăng tốc</em></p></blockquote>
+<p>LSEG Markets sẽ sử dụng AWS Outposts như một phần chiến lược trong hoạt động kinh doanh ngoại hối của mình để cung cấp các giải pháp giao dịch độ trễ thấp, linh hoạt và có khả năng mở rộng. Các giải pháp này sử dụng các dịch vụ cốt lõi của AWS để đưa ra thị trường các tính năng mới đột phá. – LSEG</p>
+<h2 id="giải-pháp">Giải pháp</h2>
+<p><img src="../../../images/3-BlogsTranslated/3.2-Blog2/k2.png" alt="Translate blog 2"></p>
+<blockquote>
+<p><em>Hình 2 – Kiến trúc của các mô hình triển khai AWS Outposts phổ biến</em></p></blockquote>
+<p>Hình minh họa trên mô tả các mô hình triển khai AWS Outposts phổ biến được quan sát thấy trên nhiều khách hàng dịch vụ tài chính. Hình minh họa giới thiệu ba cấu hình Outposts, mỗi cấu hình được thể hiện riêng biệt. Hai trong số các Outposts này sử dụng Amazon Elastic Kubernetes Service (EKS). Mặt phẳng điều khiển mở rộng từ Vùng AWS trong khi các nút công nhân hoạt động cục bộ trên các Outpost. Outpost thứ ba, được hiển thị ở cuối hình minh họa, chỉ tận dụng các phiên bản EC2 được tăng tốc kết nối mạng.</p>
+<p>Cấu hình này có thể cung cấp khả năng tính toán độ trễ cực thấp, duy trì tuân thủ quy định thông qua xử lý dữ liệu tại chỗ và mang lại trải nghiệm kết hợp nhất quán. Sơ đồ thể hiện các khả năng tối ưu hóa hiệu suất, các tính năng bảo mật nâng cao thông qua hệ thống Nitro và tính linh hoạt được cung cấp thông qua sự kết hợp giữa khối lượng công việc được chứa trong container và các phiên bản EC2 bare metal. AWS Outposts có thể cung cấp giải pháp cơ sở hạ tầng toàn diện được thiết kế riêng cho nhu cầu đặc thù của ngành dịch vụ tài chính.</p>
+<h2 id="những-lợi-ích">Những lợi ích</h2>
+<h4 id="gần-với-thanh-khoản">Gần với thanh khoản</h4>
+<p>Các công ty thị trường vốn tìm kiếm sự gần gũi với các sàn giao dịch tài chính và các nhà cung cấp thanh khoản để đạt được lợi thế cạnh tranh. Sự gần gũi này giúp giảm độ trễ khi tiếp nhận dữ liệu thị trường và thực hiện lệnh, giúp các công ty phản ứng nhanh chóng với những thay đổi của thị trường. AWS Outposts cho phép các bên tham gia đặt giải pháp đám mây của họ gần các trung tâm tài chính quan trọng này. Các phiên bản mạng máy chủ vật lý (BMN) của chúng tôi có thể kết nối trực tiếp với các cơ sở đồng đặt máy chủ của sàn giao dịch, tích hợp với cơ sở hạ tầng tài chính hiện có. Sự kết hợp giữa khoảng cách gần và kết nối trực tiếp này giúp tối đa hóa tốc độ và hiệu quả cho các bên tham gia thị trường.</p>
+<h4 id="độ-ổn-định-tĩnh">Độ ổn định tĩnh</h4>
+<p>AWS định nghĩa tính ổn định tĩnh là một nguyên tắc vận hành cơ bản, trong đó thiết kế hệ thống bao gồm khả năng tiếp tục hoạt động bình thường ngay cả khi các thành phần bị lỗi, mà không cần sự can thiệp ngay lập tức của con người hoặc các hành động khôi phục tự động. Các rack AWS Outposts với các phiên bản EC2 kết nối mạng tăng tốc tích hợp tính ổn định tĩnh như một thành phần chủ chốt. Bằng cách giảm thiểu tất cả các phụ thuộc vào Vùng AWS và chỉ cung cấp lưu trữ phiên bản, với khởi động cục bộ, chúng tôi đảm bảo rằng bất kỳ sự gián đoạn nào đối với một dịch vụ đang chạy trong Vùng của chúng tôi đều không ảnh hưởng đến hoạt động của bất kỳ ứng dụng nào đang chạy trên các phiên bản EC2 kết nối mạng tăng tốc. Với sự hợp tác của khách hàng, chúng tôi đã thử nghiệm thành công các phiên bản này hoạt động trong hơn một tuần khi tạm thời ngắt kết nối khỏi Vùng, với các ứng dụng được thiết kế tốt.</p>
+<h4 id="aws-console-và-bảng-điều-khiển-aws">AWS Console và bảng điều khiển AWS</h4>
+<p>Các nguyên tắc thiết kế cốt lõi tạo nên nền tảng của các dịch vụ đám mây hiện đại, nhấn mạnh tính nhất quán trong mọi tương tác dịch vụ và một Kiến trúc Hướng Dịch vụ (SOA) mạnh mẽ. Các dịch vụ này, được xây dựng với tư duy API-first, đảm bảo mọi tính năng đều có thể truy cập được bằng lập trình trước khi được triển khai trong giao diện người dùng. Bảo mật là một phần của thiết kế ngay từ đầu chứ không phải được thêm vào sau đó.</p>
+<p>Kiến trúc kỹ thuật dựa trên các dịch vụ độc lập, dạng mô-đun với ranh giới và trách nhiệm được xác định rõ ràng. API triển khai các mẫu và quy ước đặt tên nhất quán, trong khi các cơ chế mã hóa và kiểm soát truy cập toàn diện bảo vệ dữ liệu và tài nguyên. Kiến trúc hỗ trợ các chức năng hướng sự kiện và cung cấp nhiều mẫu tích hợp khác nhau để kết nối với các hệ thống và dịch vụ khác.</p>
+<h2 id="phần-kết-luận">Phần kết luận</h2>
+<p>Ngành dịch vụ tài chính đòi hỏi các giải pháp cơ sở hạ tầng mang lại hiệu suất vượt trội, đồng thời vẫn tuân thủ nghiêm ngặt các quy định và đảm bảo quyền truy cập công bằng cho tất cả người tham gia. Các tủ rack AWS Outposts với các phiên bản EC2 kết nối mạng được tăng tốc đáp ứng những thách thức này bằng cách kết hợp khả năng của các phiên bản máy chủ vật lý (bare metal), các tính năng kết nối mạng chuyên biệt và cơ chế định thời chính xác. Thông qua các phiên bản EC2 kết nối mạng được tăng tốc, hỗ trợ đa hướng gốc, đồng bộ hóa PTP và cáp có chiều dài bằng nhau, chúng tôi cung cấp một nền tảng xử lý các ứng dụng tài chính đòi hỏi khắt khe nhất đồng thời đáp ứng tuân thủ quy định.</p>
+<p>Nguyên tắc ổn định tĩnh làm nền tảng cho kiến trúc của chúng tôi đảm bảo khả năng phục hồi vận hành, trong khi khả năng kết nối gần và các tùy chọn kết nối trực tiếp của chúng tôi cho phép các công ty duy trì lợi thế cạnh tranh. Bằng cách tận dụng các giao diện AWS Console và API quen thuộc, các tổ chức có thể tích hợp các khả năng chuyên biệt này vào quy trình làm việc hiện có của mình, đồng thời duy trì tính bảo mật và tính nhất quán mà họ mong đợi từ các dịch vụ đám mây.</p>
+<p>Khi thị trường tài chính tiếp tục phát triển và nhu cầu về độ trễ thấp hơn cùng độ tin cậy cao hơn ngày càng tăng, các giá đỡ AWS Outposts với các phiên bản EC2 kết nối mạng được tăng tốc luôn sẵn sàng hỗ trợ thế hệ đổi mới tài chính tiếp theo. Thông qua cam kết về hiệu suất, tính công bằng và tuân thủ quy định, chúng tôi đang trao quyền cho các tổ chức tài chính xây dựng và vận hành các hệ thống quan trọng một cách tự tin trong môi trường thị trường ngày càng năng động.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../../vi/3-blogstranslated/3.1-blog1/" title="Blog 1"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../../vi/3-blogstranslated/3.3-blog3/" title="Blog 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1765196298"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1765196298"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1765196298"></script>
+    <script src="../../../js/jquery.sticky.js?1765196298"></script>
+    <script src="../../../js/featherlight.min.js?1765196298"></script>
+    <script src="../../../js/highlight.pack.js?1765196298"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1765196298"></script>
+    <script src="../../../js/learn.js?1765196298"></script>
+    <script src="../../../js/hugo-learn.js?1765196298"></script>
+
+    <link href="../../../mermaid/mermaid.css?1765196298" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1765196298"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
