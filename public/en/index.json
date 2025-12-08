@@ -1,0 +1,22 @@
+[
+{
+	"uri": "http://localhost:1313/aws-workshop/en/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:1313/aws-workshop/en/",
+	"title": "Internship Report",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:1313/aws-workshop/en/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

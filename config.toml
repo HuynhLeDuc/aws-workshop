@@ -1,25 +1,21 @@
-baseURL = 'https://github.com/HuynhLeDuc/aws-workshop.git'
+baseURL = 'https://huynhleduc.github.io/aws-workshop/'
 relativeURLs = true
 canonifyURLs = true
 
-# Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
-# For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
-  # Git hub repo link
   editURL = ""
   description = ""
   author = "huynhld.ai@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  
+
 [Languages]
 [Languages.en]
 title = "Internship Report"
@@ -47,3 +43,11 @@ weight = 20
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+
+  [markup.goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = "github"
