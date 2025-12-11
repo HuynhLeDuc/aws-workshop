@@ -7,7 +7,8 @@ pre: " <b> 3. </b> "
 ---
 
 
-This section will list and introduce the blogs you have translated. For example:
+
+
 
 ###  [Modernizing Java Applications with Amazon Q Developer and Visual Studio Code](3.1-Blog1/)
 This blog covers the process of modernizing legacy Java applications using Amazon Q Developer and Visual Studio Code. It covers configuring a development environment with multiple JDK versions, integrating Amazon Q Developer, and using the /transform feature to automatically migrate applications from Java 8 or Java 11 to Java 21. It also describes the ability to generate automated unit tests using /test, which can help reduce technical debt, optimize performance, and simplify maintenance of Java applications.
